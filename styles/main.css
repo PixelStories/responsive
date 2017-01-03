@@ -1,0 +1,195 @@
+.container {
+  
+}
+
+
+/* ------------------------------------------
+  FIXED HEADER
+--------------------------------------------- */
+
+header {
+  position: fixed;
+  background: none;
+  z-index: 3;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 55px;
+  padding: 0 20px;
+  color: #fff;
+  float: left;
+}
+
+/* ------------------------------------------
+  RESPONSIVE NAVIGATION MENU
+--------------------------------------------- */
+
+.nav-menu {
+  padding-left: 0; 
+  margin-left: 0;
+  text-align: right;
+}
+
+.nav-menu li {
+  display: inline-block;
+}
+
+.nav-menu a {
+  display: inline-block;
+  padding: 5px 15px 5px 15px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.nav-menu-icon {
+  display: hidden;
+  height: 40px;
+  width: 40px;
+  background: url(../images/hamburg-menu.png) center;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    position: absolute;
+  }
+
+  .nav-menu-icon {
+    display: inline-block;
+    float: right;
+  }
+
+  nav .nav-menu, nav:active .nav-menu { 
+    display: none;
+    position: absolute;
+    padding: 20px;
+    background: #fff;
+    border: 3px solid #000;
+    right: 20px;
+    top: 60px;
+    width: 50%;
+    border-radius: 4px 0 4px 4px;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: 0;
+  }
+
+  nav:hover .nav-menu {
+    display: inline-block;
+  }
+}
+
+/* ------------------------------------------
+  BACKGROUND IMAGE
+--------------------------------------------- */
+
+.first-background-image {
+  background-image: url(../images/background_image.png);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+@media only screen and (min-width: 480px) {
+}
+
+@media only screen and (min-width: 768px) {
+}
+
+/* ------------------------------------------
+  GENERAL IMAGE SETTINGS
+--------------------------------------------- */
+
+.my-image {
+  background-size: cover;
+  min-height: 100vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* ------------------------------------------
+  CONCEPT
+--------------------------------------------- */
+
+.our-concept-image {
+  background-image: url(../images/concept.jpg);
+}
+
+.our-concept-project-text {
+  background-color: #615F5F;
+  height: 60vh;
+  width: 100%;
+  position: absolute;
+  top: 120px;
+  opacity: 0.8;
+}
+
+.my-header-1 {
+  font-family: "Open Sans";
+  font-weight: 700; /*bold*/
+  font-size: 3rem;
+  text-align: center;
+}
+
+.my-usual-text {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ------------------------------------------
+  GENERAL BUTTON SETTINGS
+--------------------------------------------- */
+
+.all-button {
+  background-color: #f12241;
+  border-radius: 20px;
+  border: 1px solid #272727;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  left: 45%;
+}
+
+/* ------------------------------------------
+  PROJECTS
+--------------------------------------------- */
+
+.our-project-image {
+  background-color: #c5c2c2;
+}
+
+/* ------------------------------------------
+  CLIENTS
+--------------------------------------------- */
+
+.our-clients-image {
+  background-color: #c5c2c2;
+}
+
+/* ------------------------------------------
+  ABOUT US
+--------------------------------------------- */
+
+.our-about-us-image {
+  background-color: #c5c2c2;
+}
+
