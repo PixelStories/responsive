@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Pixel Stories</title>
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- <script src="nav_menu.js"></script> -->
+        <link rel="stylesheet" href="stylesheet.css">
+    </head>
+    <body>
+        <!-- NAVIGATION MENU -->
+      <header>
+            <div class="fixed_menu">
+                <a  class="fixed" href="index.html"><img alt="logo" src="images/logo1.png" class="logo"></a>
+                <nav class="fixed">
+                    <ul class="nav-menu">
+                        <li><a href="index.html" title="Home">Home</a></li>
+                        <li><a href="projects.html" title="Projects">Projects</a></li>
+                        <li><a href="about.html" title="About  us">About us</a></li>
+                        <li><a href="contact.html" title="Contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <!-- CONTACT FORM SECTION -->
+            <section class="contact_box">
+                <h3>Tell us about your brand story</h3>
+                <form id="contact_form">
+                    <!-- Elements grouped in <div> for styling -->
+                    <div class="full_name">
+                        First Name:
+                        <input type="text" name="firstName">
+                        Last Name:
+                        <input type="text" name="lastName">
+                    </div>
+                    <div class="other_contact_info">
+                        Email:
+                        <input type="text" name="email">
+                        Telephone:
+                        <input type="text" name="telephone">
+                    </div>
+                </form>
+                <!-- textarea and button element have form attribute to "link" them to the form above -->
+                <textarea name="message" form="contact_form">
+                </textarea>
+                <button type="submit" form="contact_form" value="submit">Send</button>
+            </section>
+            <!-- LOCATION MAP SECTION -->
+            <section class="map">
+                <!-- <section> element requires a heading element -->
+                <h3>Find us</h3>
+                <figure>
+                    <img src="map.png" alt="map">
+                </figure>
+            </section> 
+        </main>
+        <!-- FOOTER -->
+      <footer>
+          <p>Pixel Stories</p>
+          <p>Tomtebodavägen 3A</p>
+          <p>171 65, Solna</p>
+          <p>08-466 60 00</p>
+          <p>pixelstories.se</p>
+      </footer>
+    </body>
+</html>
+
