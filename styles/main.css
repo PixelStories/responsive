@@ -2,6 +2,39 @@
   GENERAL SETTINGS
 --------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------
+  RESPONSIV LOGO
+--------------------------------------------- */
+.logo-m, .logo-s {
+  display: none;
+}
+
+.logo-l {
+
+}
+
+@media only screen and (max-width: 768px) {
+  .logo-l, .logo-s {
+    display: none;
+  }
+
+  .logo-m {
+    background: url(../images/logo-m.png);
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 544px) {
+  .logo-l, .logo-m {
+    display: none;
+  }
+
+  .logo-s {
+    background: url(../images/logo-s.png);
+    display: block;
+  }
+}
+
+/* ------------------------------------------
   CONTAINERS
 --------------------------------------------- */
 .container {
