@@ -1,14 +1,76 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  GENERAL SETTINGS
+--------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------
+  CONTAINERS
+--------------------------------------------- */
 .container {
-  
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  text-align: center;
 }
 
+.container-element {
+  width: 49%;
+  height: 50vh;
+  display: inline-block;
+}
+
+/* ------------------------------------------
+  HEADERS
+--------------------------------------------- */
+.my-header-1 {
+  font-family: "Open Sans";
+  font-weight: 700; /*bold*/
+  font-size: 3rem;
+  text-align: center;
+}
+
+.my-header-2 {
+
+}
+
+/* ------------------------------------------
+  USUAL TEXT
+--------------------------------------------- */
+.my-usual-text {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* ------------------------------------------
+  IMAGES
+--------------------------------------------- */
+.my-image {
+  background-size: cover;
+  min-height: 100vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+/* ------------------------------------------
+  BUTTONS
+--------------------------------------------- */
+.all-buttons {
+  background-color: #f12241;
+  border-radius: 20px;
+  border: 1px solid #272727;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  left: 45%;
+}
 
 /* ------------------------------------------
   FIXED HEADER
 --------------------------------------------- */
-
-header {
-  background-image: url()
+.fixed_menu {
+  position: fixed;
   background: none;
   z-index: 3;
   width: 100%;
@@ -29,7 +91,6 @@ header {
 /* ------------------------------------------
   RESPONSIVE NAVIGATION MENU
 --------------------------------------------- */
-
 .nav-menu {
   padding-left: 0; 
   margin-left: 0;
@@ -62,7 +123,7 @@ header {
 }
 
 @media only screen and (max-width: 768px) {
-  header {
+  .fixed_menu {
     position: absolute;
   }
 
@@ -95,39 +156,78 @@ header {
   }
 }
 
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  INDEX.HTML
+--------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------
   BACKGROUND IMAGE
 --------------------------------------------- */
-
 .first-background-image {
-  background-image: url(../images/background_image.png);
+  background-image: url(../images/Desktop.png);
   background-size: cover;
   min-height: 100vh;
-}
-
-@media only screen and (min-width: 480px) {
-}
-
-@media only screen and (min-width: 768px) {
-}
-
-/* ------------------------------------------
-  GENERAL IMAGE SETTINGS
---------------------------------------------- */
-
-.my-image {
-  background-size: cover;
-  min-height: 100vh;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
   position: relative;
+}
+
+.red-rectangle {
+  min-height: 100vh;
+  position: absolute;
+  right: 0;
+  width: 30%;
+  background-color: #f12241;
+}
+
+@media only screen and (max-width: 768px) and (orientation:landscape) {
+  .first-background-image {
+    background-image: url(../images/Desktop.png);
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .red-rectangle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) and (orientation:portrait) {
+  .first-background-image {
+    background-image: url(../images/tabletPortrait.png);
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .red-rectangle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 544px) and (orientation:landscape) {
+  .first-background-image {
+    background-image: url(../images/mobileLandscape_v2.png);
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .red-rectangle {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 544px) and (orientation:portrait) {
+  .first-background-image {
+    background-image: url(../images/mobilePortrait_v2.png);
+    background-size: cover;
+    min-height: 100vh;
+  }
+
+  .red-rectangle {
+    display: none;
+  }
 }
 
 /* ------------------------------------------
   CONCEPT
 --------------------------------------------- */
-
 .our-concept-image {
   background-image: url(../images/concept.jpg);
 }
@@ -141,38 +241,9 @@ header {
   opacity: 0.8;
 }
 
-.my-header-1 {
-  font-family: "Open Sans";
-  font-weight: 700; /*bold*/
-  font-size: 3rem;
-  text-align: center;
-}
-
-.my-usual-text {
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-}
-
-/* ------------------------------------------
-  GENERAL BUTTON SETTINGS
---------------------------------------------- */
-
-.all-button {
-  background-color: #f12241;
-  border-radius: 20px;
-  border: 1px solid #272727;
-  text-align: center;
-  margin: 0 auto;
-  position: relative;
-  left: 45%;
-}
-
 /* ------------------------------------------
   PROJECTS
 --------------------------------------------- */
-
 .our-project-image {
   background-color: #c5c2c2;
 }
@@ -180,7 +251,6 @@ header {
 /* ------------------------------------------
   CLIENTS
 --------------------------------------------- */
-
 .our-clients-image {
   background-color: #c5c2c2;
 }
@@ -188,8 +258,74 @@ header {
 /* ------------------------------------------
   ABOUT US
 --------------------------------------------- */
-
 .our-about-us-image {
   background-color: #c5c2c2;
 }
 
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  PROJECTS.HTML
+--------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------
+  GENERAL SETTINGS FOR PROJECTS
+--------------------------------------------- */
+.all-projects-image {
+  width: 100%;
+}
+
+/* ------------------------------------------
+  BACKGROUND IMAGE
+--------------------------------------------- */
+.our-projects-image {
+  background-color: #c5c2c2;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+/* ------------------------------------------
+  PROJECT 1
+--------------------------------------------- */
+
+
+
+/* ------------------------------------------
+  PROJECT 2
+--------------------------------------------- */
+
+
+
+/* ------------------------------------------
+  PROJECT 3
+--------------------------------------------- */
+
+
+
+/* ------------------------------------------
+  PROJECT 4
+--------------------------------------------- */
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  ABOUT.HTML
+--------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------
+  
+--------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------
+  CONTACT.HTML
+--------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------
+  
+--------------------------------------------- */
