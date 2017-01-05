@@ -8,9 +8,6 @@
   display: none;
 }
 
-.logo-l {
-
-}
 
 @media only screen and (max-width: 768px) {
   .logo-l, .logo-s {
