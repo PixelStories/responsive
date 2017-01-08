@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Pixel Stories</title>
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
-  <!-- <script src="nav_menu.js"></script> -->
+  <script src="js/hamburger-menu.js"></script>
 </head>
 
 <body>
@@ -16,8 +16,9 @@
       <a href="index.html"><img alt="logo" src="images/logo-l.png" class="logo-l"></a>
       <a href="index.html"><img alt="logo" src="images/logo-m.png" class="logo-m"></a>
       <a href="index.html"><img alt="logo" src="images/logo-s.png" class="logo-s"></a>
-      <a href="#" class="nav-menu-icon"></a>
-      <nav class="fixed">
+      <a href="#" id="hamburg-menu" class="nav-menu-icon" onclick="toggleMenu()"></a>
+      <a href="#" id="close-hamburg-menu" class="nav-close-menu-icon" onclick="toggleMenu()"></a>
+      <nav id="toggle-menu" class="nav-menu-links">
         <ul class="nav-menu">
           <li><a href="index.html" title="Home">Home</a></li>
           <li><a href="projects.html" title="Projects">Projects</a></li>

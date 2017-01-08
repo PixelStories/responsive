@@ -4,10 +4,15 @@
 /* ------------------------------------------
   RESPONSIV LOGO
 --------------------------------------------- */
+.logo-l,
+.logo-m,
+.logo-s {
+  margin: 1rem;
+}
+
 .logo-m, .logo-s {
   display: none;
 }
-
 
 @media only screen and (max-width: 768px) {
   .logo-l, .logo-s {
@@ -16,7 +21,7 @@
 
   .logo-m {
     background: url(../images/logo-m.png);
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -27,7 +32,7 @@
 
   .logo-s {
     background: url(../images/logo-s.png);
-    display: block;
+    display: inline-block;
   }
 }
 
@@ -97,44 +102,52 @@
 }
 
 /* ------------------------------------------
-  FIXED HEADER
+  RESPONSIVE NAVIGATION MENU, FIXED HEADER
 --------------------------------------------- */
-.fixed_menu {
-  position: fixed;
-  background: none;
-  z-index: 3;
-  width: 100%;
+.fixed-menu {
+  background: #fff;
+  border-bottom: 1px solid #000;
+  height: 4.75rem;
   left: 0;
+  position: fixed;
   top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
-.logo {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  text-decoration: none;
-  font-weight: bold;
-  line-height: 55px;
-  padding: 0 20px;
-  color: #fff;
-  float: left;
+.nav-menu-links {
+  float: right;
+  padding: 0 1rem;
 }
 
-/* ------------------------------------------
-  RESPONSIVE NAVIGATION MENU
---------------------------------------------- */
+.nav-menu-icon {
+  background: url(../images/hamburg-menu.png) center;
+}
+
+.nav-close-menu-icon {
+  background: url(../images/close-hamburg-menu.png) center;
+}
+
+.nav-menu-icon,
+.nav-close-menu-icon {
+  background-repeat: no-repeat;
+  display: hidden;
+  height: 40px;
+  width: 40px;
+}
+
 .nav-menu {
-  padding-left: 0; 
-  margin-left: 0;
-  text-align: right;
+  list-style: none;
 }
 
 .nav-menu li {
   display: inline-block;
+  float: left;
+  padding: .9rem
 }
 
 .nav-menu a {
-  display: inline-block;
-  padding: 5px 15px 5px 15px;
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 
@@ -143,35 +156,18 @@
   text-decoration: underline;
 }
 
-.nav-menu-icon {
-  display: hidden;
-  height: 40px;
-  width: 40px;
-  background: url(../images/hamburg-menu.png) center;
-  background-size: 40px 40px;
-  background-repeat: no-repeat;
-}
-
-@media only screen and (max-width: 768px) {
-  .fixed_menu {
+@media only screen and (max-width : 768px) {
+  .nav-menu-icon,
+  .nav-close-menu-icon {
+    display:inline-block;
     position: absolute;
+    right: 0;
+    top: 0;
+    margin: 1rem;
   }
 
-  .nav-menu-icon {
-    display: inline-block;
-    float: right;
-  }
-
-  nav .nav-menu, nav:active .nav-menu { 
-    display: none;
-    position: absolute;
-    padding: 20px;
-    background: #fff;
-    border: 3px solid #000;
-    right: 20px;
-    top: 60px;
-    width: 50%;
-    border-radius: 4px 0 4px 4px;
+  .nav-close-menu-icon {
+    visibility: hidden;
   }
 
   .nav-menu li {
@@ -179,11 +175,28 @@
     width: 100%;
     padding: 10px 0;
     margin: 0;
+    text-align: right;
   }
 
-  nav:hover .nav-menu {
-    display: inline-block;
+  .nav-menu a {
+    color: #fff;
   }
+
+  .nav-menu-links {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    top: 4.72rem;
+    border: 1px solid #000;
+    width: 40%;
+    background-color: #272727;
+    opacity: .8;
+    height: 50vh;
+  }
+}
+
+.show-menu {
+  visibility: visible;
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------
@@ -359,3 +372,4 @@
 /* ------------------------------------------
   
 --------------------------------------------- */
+
