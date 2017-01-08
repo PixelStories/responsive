@@ -2,38 +2,13 @@
   GENERAL SETTINGS
 --------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------
-  RESPONSIV LOGO
+  RESPONSIVE LOGO
 --------------------------------------------- */
-.logo-l,
-.logo-m,
-.logo-s {
-  margin: 1rem;
-}
-
-.logo-m, .logo-s {
-  display: none;
-}
-
-@media only screen and (max-width: 768px) {
-  .logo-l, .logo-s {
-    display: none;
-  }
-
-  .logo-m {
-    background: url(../images/logo-m.png);
-    display: inline-block;
-  }
-}
-
-@media only screen and (max-width: 544px) {
-  .logo-l, .logo-m {
-    display: none;
-  }
-
-  .logo-s {
-    background: url(../images/logo-s.png);
-    display: inline-block;
-  }
+.logo {
+  margin: 0 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* ------------------------------------------
@@ -55,15 +30,29 @@
 /* ------------------------------------------
   HEADERS
 --------------------------------------------- */
-.my-header-1 {
+
+body {
   font-family: "Open Sans";
-  font-weight: 700; /*bold*/
-  font-size: 3rem;
-  text-align: center;
 }
 
-.my-header-2 {
+h1 {
+  font-weight: 600;
+  font-size: 3em;
+}
 
+h2 {
+  font-weight: 500;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 2em;
+}
+
+h4 {
+  font-weight: 300;
+  font-size: 1.5em;
 }
 
 /* ------------------------------------------
@@ -116,8 +105,9 @@
 }
 
 .nav-menu-links {
-  float: right;
-  padding: 0 1rem;
+  padding: 0 2rem;
+  position: absolute;
+  right: 0;
 }
 
 .nav-menu-icon {
@@ -142,7 +132,6 @@
 
 .nav-menu li {
   display: inline-block;
-  float: left;
   padding: .9rem
 }
 
@@ -160,10 +149,12 @@
   .nav-menu-icon,
   .nav-close-menu-icon {
     display:inline-block;
+    margin: 0 2rem;
     position: absolute;
     right: 0;
     top: 0;
-    margin: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .nav-close-menu-icon {
@@ -171,11 +162,11 @@
   }
 
   .nav-menu li {
-    text-align: center;
-    width: 100%;
-    padding: 10px 0;
     margin: 0;
+    padding: 10px 0;
+    text-align: center;
     text-align: right;
+    width: 100%;
   }
 
   .nav-menu a {
@@ -183,15 +174,13 @@
   }
 
   .nav-menu-links {
-    visibility: hidden;
-    position: absolute;
-    right: 0;
-    top: 4.72rem;
-    border: 1px solid #000;
-    width: 40%;
     background-color: #272727;
-    opacity: .8;
+    border: 1px solid #000;
     height: 50vh;
+    opacity: .8;
+    top: 4.72rem;
+    visibility: hidden;
+    width: 40%;
   }
 }
 
