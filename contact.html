@@ -8,12 +8,22 @@
         <link rel="stylesheet" href="styles/main.css">
         <!-- <script src="nav_menu.js"></script> -->
         <link rel="stylesheet" href="stylesheet.css">
+        <!-- favicon -->
+        <link rel="shortcut icon" href="images/favicon16.png" type="image/png">
     </head>
     <body>
         <!-- NAVIGATION MENU -->
-        <header>
-            <div class="fixed_menu">
-                <a href="index.html"><img alt="logo" src="images/logo1.png" class="logo"></a>
+        <header class="fixed_menu">
+            <div class="logo"><a href="index.html">
+                <img
+                     srcset="images/logo@0,1x.png 320w, 
+                             images/logo@0,25x.png 640w,
+                             images/logo@0,5x.png 1240w"
+                     sizes="50vw"
+                     src="images/logo@0,1x.png"
+                     alt="logo pixelstories"></a>
+            </div>
+            <div class="nav-menu-icon"></div>
                 <nav>
                     <ul class="nav-menu">
                         <li><a href="index.html" title="Home">Home</a></li>
@@ -22,7 +32,6 @@
                         <li><a href="contact.html" title="Contact">Contact</a></li>
                     </ul>
                 </nav>
-            </div>
         </header>
         <main>
             <!-- CONTACT FORM SECTION -->
