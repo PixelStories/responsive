@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Pixel Stories</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="images/favicon16.png" type="image/png">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
   <script src="js/hamburger-menu.js"></script>
@@ -13,9 +15,16 @@
   <!-- NAVIGATION MENU -->
   <header>
     <div class="fixed-menu">
-      <a href="index.html"><img alt="logo" src="images/logo-l.png" class="logo-l"></a>
-      <a href="index.html"><img alt="logo" src="images/logo-m.png" class="logo-m"></a>
-      <a href="index.html"><img alt="logo" src="images/logo-s.png" class="logo-s"></a>
+      <div class="logo">
+        <a href="index.html">
+          <img srcset="images/logo@0,1x.png 320w, 
+                       images/logo@0,25x.png 640w,
+                       images/logo@0,5x.png 1240w"
+               sizes="50vw"
+               src="images/logo@0,1x.png"
+               alt="logo pixelstories">
+        </a>
+      </div>
       <a href="#" id="hamburg-menu" class="nav-menu-icon" onclick="toggleMenu()"></a>
       <a href="#" id="close-hamburg-menu" class="nav-close-menu-icon" onclick="toggleMenu()"></a>
       <nav id="toggle-menu" class="nav-menu-links">
@@ -44,7 +53,7 @@
     <section class="container">
       <div class="my-image our-concept-image">
         <div class="our-concept-project-text">
-          <h1 class="my-header-1">Our Concept</h1>
+          <h1>Our Concept</h1>
           <p class="my-usual-text">We love challenge, and are passionate about what we do, giving your brand image a life. We listen to your story and translate it into our design with our experience. Send your brand story to your audience! We help you to give a form to your brand.</p>
         </div>
       </div>
@@ -54,7 +63,7 @@
     <section class="container">
       <div class="my-image our-project-image">
         <div class="our-concept-project-text">
-          <h1 class="my-header-1">Our projects</h1>
+          <h1>Our projects</h1>
           <p class="my-usual-text">Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects</p>
           <button class="all-buttons" formaction="projects.html" type="button">Read more</button>
         </div>
@@ -64,7 +73,7 @@
     <!-- OUR CLIENTS -->
     <section class="container">
       <div class="my-image our-clients-image">
-        <h1 class="my-header-1">Our clients</h1>
+        <h1>Our clients</h1>
         <figure></figure>
         <figure></figure>
         <figure></figure>
@@ -77,7 +86,7 @@
     <!-- ABOUT US -->
     <section class="container">
       <div class="my-image our-about-us-image">
-        <h1 class="my-header-1">About us</h1>
+        <h1>About us</h1>
         <p class="my-usual-text">Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us</p>
         <button class="all-buttons" formaction="about.html" type="button">Read more</button>
       </div>

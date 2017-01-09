@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title>Pixel Stories</title>
+  <link rel="shortcut icon" href="images/favicon16.png" type="image/png">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
   <script src="js/hamburger-menu.js"></script>
@@ -12,10 +13,17 @@
 <body>
   <!-- NAVIGATION MENU -->
   <header>
-    <div class="fixed_menu">
-      <a href="index.html"><img alt="logo" src="images/logo-l.png" class="logo-l"></a>
-      <a href="index.html"><img alt="logo" src="images/logo-m.png" class="logo-m"></a>
-      <a href="index.html"><img alt="logo" src="images/logo-s.png" class="logo-s"></a>
+    <div class="fixed-menu">
+      <div class="logo">
+        <a href="index.html">
+          <img srcset="images/logo@0,1x.png 320w, 
+                       images/logo@0,25x.png 640w,
+                       images/logo@0,5x.png 1240w"
+               sizes="50vw"
+               src="images/logo@0,1x.png"
+               alt="logo pixelstories">
+        </a>
+      </div>
       <a href="#" id="hamburg-menu" class="nav-menu-icon" onclick="toggleMenu()"></a>
       <a href="#" id="close-hamburg-menu" class="nav-close-menu-icon" onclick="toggleMenu()"></a>
       <nav id="toggle-menu" class="nav-menu-links">
@@ -32,7 +40,7 @@
   <main>
   <!-- OUR PROJECTS -->
     <section class="our-projects-image">
-      <h1 class="my-header-1">Our projects</h1>
+      <h1>Our projects</h1>
     </section>
 
     <!-- PROJECT 1 AND PROJECT 2 -->
@@ -42,13 +50,13 @@
         <img src="images/example1.png" alt="project" class="all-projects-image">
       </div>
       <div class="container-element">
-        <h2 class="my-header-2">Project 1</h2>
+        <h2>Project 1</h2>
         <p class="my-usual-text">Bla bla bla Project 1 Bla bla bla Project 1 Bla bla bla Project 1 Bla bla bla Project 1 Bla bla bla Project 1 Bla bla bla Project 1</p>
       </div>
 
       <!-- PROJECT 2 -->
       <div class="container-element">
-        <h2 class="my-header-2">Project 2</h2>
+        <h2>Project 2</h2>
         <p class="my-usual-text">Bla bla bla Project 2 Bla bla bla Project 2 Bla bla bla Project 2 Bla bla bla Project 2 Bla bla bla Project 2 Bla bla bla Project 2</p>
       </div>
       <div class="container-element"> 
@@ -63,7 +71,7 @@
         <img src="images/example3.png" alt="project" class="all-projects-image">
       </div>
       <div class="container-element">
-        <h2 class="my-header-2">Project 3</h2>
+        <h2>Project 3</h2>
         <p class="my-usual-text">Bla bla bla Project 3 Bla bla bla Project 3 Bla bla bla Project 3 Bla bla bla Project 3 Bla bla bla Project 3 Bla bla bla Project 3</p>
       </div>
 
@@ -72,7 +80,7 @@
         <img src="images/example4.png" alt="project" class="all-projects-image">
       </div>
       <div class="container-element">
-        <h2 class="my-header-2">Project 4</h2>
+        <h2>Project 4</h2>
         <p class="my-usual-text">Bla bla bla Project 4 Bla bla bla Project 4 Bla bla bla Project 4 Bla bla bla Project 4 Bla bla bla Project 4 Bla bla bla Project 4</p>
       </div>
     </section>
