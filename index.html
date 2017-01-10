@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
   <script src="js/hamburger-menu.js"></script>
+  <script src="js/button_click.js"></script>
 </head>
 
 <body>
@@ -41,17 +42,18 @@
   <main>
   <!-- BACKGROUND IMAGE -->
     <section class="container">
-      <div class="first-background-image"></div>
-        <!-- GÖRA NÅN MED DETTA 
-        <p>The best designs</p>
-        <p>tell a story</p> -->
-      <div class="red-rectangle"></div>
+      <div class="home-background-image">
+        <p id="text-right">The best designs</p>
+      </div>
+      <div class="red-rectangle">
+        <p id="text-left">tell a story</p>
+      </div>
     </section>
 
     <!-- OUR CONCEPT -->
     <section class="container">
       <div class="my-image our-concept-image">
-        <div class="our-concept-project-text">
+        <div class="concept-project-clients-about-rectangle">
           <h1>Our Concept</h1>
           <p class="my-usual-text">We love challenge, and are passionate about what we do, giving your brand image a life. We listen to your story and translate it into our design with our experience. Send your brand story to your audience! We help you to give a form to your brand.</p>
         </div>
@@ -61,10 +63,10 @@
     <!-- OUR PROJECTS -->
     <section class="container">
       <div class="my-image our-project-image">
-        <div class="our-concept-project-text">
+        <div class="concept-project-clients-about-rectangle">
           <h1>Our projects</h1>
-          <p class="my-usual-text">Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects Bla bla bla our projects</p>
-          <button class="all-buttons" formaction="projects.html" type="button">Read more</button>
+          <p class="my-usual-text">We work together with a client, as a single team. So we can get better understanding of what exactly our clients need and offer the best solution. Our projects can include simple or advanced functionality, we create user-friendly interfaces with logical structures and harmonious design. We execute projects that bring results and help your business!</p>
+          <button class="all-buttons" formaction="projects.html" type="button" onClick="buttonClickProjects()">Read more</button>
         </div>
       </div>
     </section>
@@ -72,22 +74,26 @@
     <!-- OUR CLIENTS -->
     <section class="container">
       <div class="my-image our-clients-image">
-        <h1>Our clients</h1>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
-        <figure></figure>
+        <div class="concept-project-clients-about-rectangle-transparent">
+          <h1>Some of our clients</h1>
+          <figure></figure>
+          <figure></figure>
+          <figure></figure>
+          <figure></figure>
+          <figure></figure>
+          <figure></figure>
+        </div> 
       </div>
     </section>
 
     <!-- ABOUT US -->
     <section class="container">
       <div class="my-image our-about-us-image">
-        <h1>About us</h1>
-        <p class="my-usual-text">Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us Bla bla bla text about us</p>
-        <button class="all-buttons" formaction="about.html" type="button">Read more</button>
+        <div class="concept-project-clients-about-rectangle-transparent">
+          <h1>About us</h1>
+          <p class="my-usual-text">We are creative digital-web bureau. We can clearly and consistently tell the stories about the design. We do design and develop websites, and we get result. Our professional team knows the most efficient and fastest way to the top. </p>
+          <button class="all-buttons" formaction="about.html" type="button" onClick="buttonClickAbout()">Read more</button>
+        </div>
       </div>
     </section>
   </main>

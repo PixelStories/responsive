@@ -2,36 +2,8 @@
   GENERAL SETTINGS
 --------------------------------------------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------
-  RESPONSIVE LOGO
---------------------------------------------- */
-.logo {
-  margin: 0 2rem;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* ------------------------------------------
-  CONTAINERS
---------------------------------------------- */
-.container {
-  width: 100%;
-  height: 60vw;
-  position: relative;
-}
-
-ПОСАДИТЬ МЕДИА КВИРИ НА КОНТЕЙНЕР И ПОПРОБОВАТЬ
-
-.container-element {
-  width: 49%;
-  height: 50vh;
-  display: inline-block;
-}
-
-/* ------------------------------------------
   HEADERS
 --------------------------------------------- */
-
 body {
   font-family: "Open Sans";
 }
@@ -57,6 +29,21 @@ h4 {
 }
 
 /* ------------------------------------------
+  CONTAINERS
+--------------------------------------------- */
+.container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.container-element {
+  width: 49%;
+  height: 50vh;
+  display: inline-block;
+}
+
+/* ------------------------------------------
   USUAL TEXT
 --------------------------------------------- */
 .my-usual-text {
@@ -71,11 +58,12 @@ h4 {
 --------------------------------------------- */
 .my-image {
   background-size: cover;
-  min-height: 100vh;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
   position: relative;
+  width: 99%;
+  height: 100vh;
 }
 
 /* ------------------------------------------
@@ -83,17 +71,25 @@ h4 {
 --------------------------------------------- */
 .all-buttons {
   background-color: #f12241;
-  border-radius: 20px;
+  border-radius: 1rem;
   border: 1px solid #272727;
   text-align: center;
   margin: 0 auto;
-  position: relative;
-  left: 45%;
+  position: absolute;
+  left: 47%;
+  cursor: pointer;
 }
 
 /* ------------------------------------------
-  RESPONSIVE NAVIGATION MENU, FIXED HEADER
+  RESPONSIVE LOGO, NAVIGATION MENU, FIXED HEADER
 --------------------------------------------- */
+.logo {
+  margin: 0 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .fixed-menu {
   background: #fff;
   border-bottom: 1px solid #000;
@@ -195,7 +191,7 @@ h4 {
 /* ------------------------------------------
   BACKGROUND IMAGE
 --------------------------------------------- */
-.first-background-image {
+.home-background-image {
   background-image: url(../images/Desktop.png);
   position: absolute;
   width: 70%;
@@ -203,52 +199,74 @@ h4 {
 
 .red-rectangle {
   background-color: #f12241;
-  min-height: 100vh;
+  height: 100vh;
   position: absolute;
   right: 0;
   width: 30%;
 }
 
+#text-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#text-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 @media only screen and (min-width: 1024px) and (orientation:landscape) {
-  .first-background-image {
+  .home-background-image {
     background-image: url(../images/Desktop.png);
     background-size: cover;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100%;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .first-background-image {
+  .home-background-image {
     background-image: url(../images/tabletPortrait.png);
     background-size: cover;
-    min-height: 100vh;
+    height: 100vmin;
+    width: 100vmin;
   }
 
-  .red-rectangle {
+  .red-rectangle,
+  #text-right,
+  #text-left {
     display: none;
   }
 }
 
 @media only screen and (max-width: 767px) and (orientation:landscape) {
-  .first-background-image {
+  .home-background-image {
     background-image: url(../images/mobileLandscape_v2.png);
     background-size: cover;
-    min-height: 100vh;
+    height: 100vmin;
+    width: 100%;
   }
 
-  .red-rectangle {
+  .red-rectangle,
+  #text-right,
+  #text-left {
     display: none;
   }
 }
 
 @media only screen and (max-width: 767px) and (orientation:portrait) {
-  .first-background-image {
+  .home-background-image {
     background-image: url(../images/mobilePortrait_v2.png);
     background-size: cover;
-    min-height: 100vh;
+    height: 100vmin;
+    width: 100vmin;
   }
 
-  .red-rectangle {
+  .red-rectangle,
+  #text-right,
+  #text-left {
     display: none;
   }
 }
@@ -257,24 +275,76 @@ h4 {
   CONCEPT
 --------------------------------------------- */
 .our-concept-image {
-  background-image: url(../images/concept.jpg);
+  background-image: url(../images/about_desktop.jpg);
 }
 
-.our-concept-project-text {
+.concept-project-clients-about-rectangle {
   background-color: #615F5F;
   height: 60vh;
-  width: 100%;
+  width: 94,5%;
   position: absolute;
-  top: 120px;
+  top: 15%;
   opacity: 0.8;
+  text-align: center;
+  padding: 2rem;
+}
+
+@media only screen and (min-width: 1024px) and (orientation:landscape) {
+  .our-concept-image {
+    background-image: url(../images/about_desktop.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .our-concept-image {
+    background-image: url(../images/about_mobile_portrait.jpg);
+    background-size: cover;
+    height: 100vmin;
+    width: 100vmin;
+  }
+
+.concept-project-clients-about-rectangle {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation:landscape) {
+  .our-concept-image {
+    background-image: url(../images/about_land_mob.png);
+    background-size: cover;
+    height: 100vmin;
+    width: 100%;
+  }
+
+.concept-project-clients-about-rectangle {
+    background-color: transparent;
+  }
+}
+
+@media only screen and (max-width: 767px) and (orientation:portrait) {
+  .our-concept-image {
+    background-image: url(../images/about_port_mob.png);
+    background-size: cover;
+    height: 100vmin;
+    width: 100vmin;
+  }
+
+.concept-project-clients-about-rectangle {
+    background-color: transparent;
+  }
 }
 
 /* ------------------------------------------
   PROJECTS
 --------------------------------------------- */
 .our-project-image {
-  background-color: #c5c2c2;
+  background-image: url(../images/project_desktop.jpg);
 }
+
+
 
 /* ------------------------------------------
   CLIENTS
@@ -283,12 +353,25 @@ h4 {
   background-color: #c5c2c2;
 }
 
+.concept-project-clients-about-rectangle-transparent {
+  background-color: transparent;
+  height: 60vh;
+  width: 94,5%;
+  position: absolute;
+  top: 15%;
+  opacity: 0.8;
+  text-align: center;
+  padding: 2rem;
+}
+
 /* ------------------------------------------
   ABOUT US
 --------------------------------------------- */
 .our-about-us-image {
-  background-color: #c5c2c2;
+  background-color: #615f5f;
 }
+
+
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------
   PROJECTS.HTML
@@ -303,10 +386,15 @@ h4 {
 /* ------------------------------------------
   BACKGROUND IMAGE
 --------------------------------------------- */
-.our-projects-image {
-  background-color: #c5c2c2;
-  background-size: cover;
-  min-height: 100vh;
+.project-background-image {
+  background-image: url(../images/project_desktop.jpg);
+  position: absolute;
+}
+
+.center-header {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100vh;
 }
 
 /* ------------------------------------------
