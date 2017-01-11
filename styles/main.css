@@ -37,6 +37,8 @@ h4 {
   position: relative;
 }
 
+
+
 .container-element {
   width: 49%;
   height: 50vh;
@@ -58,11 +60,9 @@ h4 {
 --------------------------------------------- */
 .my-image {
   background-size: cover;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  position: relative;
-  width: 99%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
   height: 100vh;
 }
 
@@ -281,7 +281,7 @@ h4 {
 .concept-project-clients-about-rectangle {
   background-color: #615F5F;
   height: 60vh;
-  width: 94,5%;
+  margin-right: 1rem;
   position: absolute;
   top: 15%;
   opacity: 0.8;
@@ -294,7 +294,6 @@ h4 {
     background-image: url(../images/about_desktop.jpg);
     background-size: cover;
     height: 100vh;
-    width: 100%;
   }
 }
 
@@ -356,7 +355,6 @@ h4 {
 .concept-project-clients-about-rectangle-transparent {
   background-color: transparent;
   height: 60vh;
-  width: 94,5%;
   position: absolute;
   top: 15%;
   opacity: 0.8;
@@ -388,7 +386,6 @@ h4 {
 --------------------------------------------- */
 .project-background-image {
   background-image: url(../images/project_desktop.jpg);
-  position: absolute;
 }
 
 .center-header {
