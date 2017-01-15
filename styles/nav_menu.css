@@ -1,0 +1,36 @@
+/* ---------------------------------------------
+  RESPONSIVE LOGO, NAVIGATION MENU, FIXED HEADER
+------------------------------------------------ */
+/* Detta sättas från 0px till 767px - mobile first */
+
+.fixed-menu {
+  background: #fff;
+  border-bottom: 1px solid #000; /* kan tas bort senare */
+  height: 4rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo-container {
+  margin: 0 2rem;
+  height: 3.5rem;
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 3.5rem;
+}
+
+
+
+
+
+@media only screen and (min-width: 1023px)

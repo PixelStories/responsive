@@ -1,0 +1,137 @@
+/* ---------------------------------------------
+  RESPONSIVE LOGO, NAVIGATION MENU, FIXED HEADER
+------------------------------------------------ */
+.logo {
+  margin: 0 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.fixed-menu {
+  background: #fff;
+  border-bottom: 1px solid #000;
+  height: 4.75rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-menu-links {
+  padding: 0 2rem;
+  position: absolute;
+  right: 0;
+}
+
+.nav-menu-icon {
+  background: url(../images/hamburg-menu.png) center;
+}
+
+.nav-close-menu-icon {
+  background: url(../images/close-hamburg-menu.png) center;
+}
+
+.nav-menu-icon,
+.nav-close-menu-icon {
+  background-repeat: no-repeat;
+  display: hidden;
+  height: 40px;
+  width: 40px;
+}
+
+.nav-menu {
+  list-style: none;
+}
+
+.nav-menu li {
+  display: inline-block;
+  padding: .9rem
+}
+
+.nav-menu a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1023px) {
+  .nav-menu-icon,
+  .nav-close-menu-icon {
+    display:inline-block;
+    margin: 0 2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .nav-close-menu-icon {
+    visibility: hidden;
+  }
+
+  .nav-menu li {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    text-align: right;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    color: #fff;
+  }
+
+  .nav-menu-links {
+    background-color: #272727;
+    border: 1px solid #000;
+    height: 50vh;
+    opacity: .8;
+    top: 4.72rem;
+    visibility: hidden;
+    width: 40%;
+  }
+}
+
+.show-menu {
+  visibility: visible;
+}
+
+
+
+
+/* ---------------------------------------------
+  RESPONSIVE LOGO, NAVIGATION MENU, FIXED HEADER
+------------------------------------------------ */
+
+
+.nav-menu-links {
+  padding: 0 2rem;
+  position: absolute;
+  right: 0;
+}
+
+
+.nav-menu li {
+  display: inline-block;
+  padding: .9rem
+}
+
+.nav-menu a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-menu a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+

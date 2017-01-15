@@ -8,7 +8,6 @@
   <link rel="shortcut icon" href="images/favicon16.png" type="image/png">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/home.css">
-  <link rel="stylesheet" href="styles/nav_menu.css">
   <script src="js/hamburger-menu.js"></script>
   <script src="js/button_click.js"></script>
 </head>
@@ -17,9 +16,14 @@
   <!-- NAVIGATION MENU -->
   <header>
     <div class="fixed-menu">
-      <div class="logo-container">
+      <div class="logo">
         <a href="index.html">
-          <img class="logo" src="images/logo@0,1x.png" alt="logo pixelstories">
+          <img srcset="images/logo@0,1x.png 320w, 
+                       images/logo@0,25x.png 640w,
+                       images/logo@0,5x.png 1240w"
+               sizes="50vw"
+               src="images/logo@0,1x.png"
+               alt="logo pixelstories">
         </a>
       </div>
       <a href="#" id="hamburg-menu" class="nav-menu-icon" onclick="toggleMenu()"></a>
