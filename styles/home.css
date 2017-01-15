@@ -164,7 +164,6 @@ main {
 /* -------------------------------------------------------------------------------------------------------------------------
   OUR CONCEPT
 ---------------------------------------------------------------------------------------------------------------------------- */
-
 .our-concept-container {
   margin-top: 1rem;
   position: relative;
@@ -180,28 +179,23 @@ main {
 
 .concept-project-clients-about-rectangle {
   background-color: transparent;
-  position: absolute;
-  text-align: center;
-  top: 20%;
   height: 60vh;
   padding: 2rem;
-
+  position: absolute;
+  text-align: center;
+  top: 15%;
 }
 
 .text-center-paragraf {
-  text-align: justify;
   margin-left: 2rem;
   margin-right: 2rem;
+  text-align: justify;
 }
 
 @media only screen and (max-width: 767px) and (orientation:landscape) {
   .our-concept-background {
     background-image: url(../images/concept-mobile_land.png);
     height: 100vh;
-  }
-
-  .text-center {
-    top: 30%;
   }
 }
 
@@ -223,6 +217,64 @@ main {
     opacity: .8;
   }
 }
+
+/* -------------------------------------------------------------------------------------------------------------------------
+  OUR PROJECTS
+---------------------------------------------------------------------------------------------------------------------------- */
+.our-projects-container {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.our-projects-background {
+  background-image: url(../images/projects_mobile_port.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  width: auto;
+}
+
+.all-buttons {
+  background-color: #f12241;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  height: 3rem;
+  margin-right: 4rem;
+  margin-top: 2rem;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  width: 10rem;
+}
+
+@media only screen and (max-width: 767px) and (orientation:landscape) {
+  .our-projects-background {
+    background-image: url(../images/project_mobile_land.png);
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .our-projects-background {
+    background-image: url(../images/project_tablet_port.png);
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .our-projects-background {
+    background-image: url(../images/project_desktop.jpg);
+    height: 100vh;
+  }
+
+  .concept-project-clients-about-rectangle {
+    background-color: #615F5F;
+    opacity: .8;
+  }
+}
+
+
 
 
 
