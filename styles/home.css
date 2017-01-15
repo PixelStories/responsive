@@ -42,16 +42,45 @@ p {
   padding: 0;
 }
 
-/*main {
-  /*margin: 0 2%;*/
-  margin: 0 2rem;
-}*/
+main {
+  margin: 0 2%;
+}
 
 .container {
   height: 94vw;
   width: 94vw;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+    h2 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 3rem;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------
+  HOME-BACKGROUND BILD
+---------------------------------------------------------------------------------------------------------------------------- */
 .home-background-container {
   background-image: url(../images/mobilePortrait_v2.png);
   background-repeat: no-repeat;
@@ -75,11 +104,9 @@ p {
   display: none;
 }
 
-
 @media only screen and (max-width: 767px) and (orientation:landscape) {
   .home-background-container {
     background-image: url(../images/mobileLandscape_v2.png);
-
   }
 }
 
@@ -95,8 +122,7 @@ p {
     background:
       url(../images/desktop_hd.png)
       center center / cover
-      no-repeat
-      fixed;
+      no-repeat;
     height: 100vh;
     width: 100%;
   }
@@ -115,8 +141,9 @@ p {
     display: inline-block;
     height: 100vh;
     line-height: 100vh;
-    margin-left: -25rem;
+    margin-left: -29rem;
     white-space: nowrap;
+    font-size: 3.5rem;
   }
 
   .home-background-header-desktop-right {
@@ -126,9 +153,78 @@ p {
     line-height: 100vh;
     margin-left: 2rem;
     white-space: nowrap;
+    font-size: 3.5rem;
   }
 
   .home-background-header {
     display: none;
   }
 }
+
+/* -------------------------------------------------------------------------------------------------------------------------
+  OUR CONCEPT
+---------------------------------------------------------------------------------------------------------------------------- */
+
+.our-concept-container {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.our-concept-background {
+  background-image: url(../images/concept_mobile_port.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  width: auto;
+}
+
+.concept-project-clients-about-rectangle {
+  background-color: transparent;
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  height: 60vh;
+  padding: 2rem;
+
+}
+
+.text-center-paragraf {
+  text-align: justify;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 767px) and (orientation:landscape) {
+  .our-concept-background {
+    background-image: url(../images/concept-mobile_land.png);
+    height: 100vh;
+  }
+
+  .text-center {
+    top: 30%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .our-concept-background {
+    background-image: url(../images/concept-tablet-port.png);
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .our-concept-background {
+    background-image: url(../images/concept-desktop.jpg);
+    height: 100vh;
+  }
+
+  .concept-project-clients-about-rectangle {
+    background-color: #615F5F;
+    opacity: .8;
+  }
+}
+
+
+
+
+
