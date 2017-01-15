@@ -8,29 +8,109 @@
   border-bottom: 1px solid #000; /* kan tas bort senare */
   height: 4rem;
   left: 0;
+  overflow:auto;
   position: fixed;
+  right: 0;
   top: 0;
-  width: 100%;
-  z-index: 100;
+  z-index: 999;
 }
 
 .logo-container {
   margin: 0 2rem;
-  height: 3.5rem;
-  width: 20%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: 20%;
 }
 
 .logo {
-  max-width: 100%;
   height: auto;
   max-height: 3.5rem;
+  max-width: 100%;
 }
 
+.toggle-icon {
+  height: 2.2rem;
+  margin: 0 2rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.2rem;
+}
 
+.nav-menu-icon,
+.nav-close-menu-icon {
+  max-width: 100%;
+}
 
+.nav-close-menu-icon {
+  display: none;
+}
 
+.nav-menu-container {
+  background-color: #272727;
+  height: 50vh;
+  opacity: .8;
+  position: fixed;
+  right: 0;
+  text-align: right;
+  padding-top: 4rem;
+  display: none;
+  width: 40%;
+  z-index: 99;
+}
 
-@media only screen and (min-width: 1023px)
+.nav-menu-list {
+  list-style: none;
+  padding: 0 2rem;
+}
+
+.nav-menu-list li {
+  padding: .625rem 0;
+  width: 100%;
+}
+
+.nav-menu-list a {
+  color: #fff;
+  font-size: large;
+  text-decoration: none;
+}
+
+.show-menu {
+  display: block;
+}
+
+@media only screen and (max-width: 767px) and (orientation:landscape) {
+  .nav-menu-container {
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .toggle-icon {
+    display: none;
+  }
+
+  .nav-menu-container {
+    background-color: transparent;
+    display: block;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    z-index: 99999;
+  }
+
+  .nav-menu-list li {
+    display: inline;
+    padding: 0.9rem;
+  }
+
+  .nav-menu-list a {
+    color: #000;
+  }
+
+  .nav-menu-list a:hover {
+    text-decoration: underline;
+  }
+}

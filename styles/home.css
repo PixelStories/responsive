@@ -4,36 +4,36 @@
 /* Detta sättas från 0px till 767px - mobile first */
 
 html {
-  width: 100vw;
-  height: 100vh;
   font-size: 62.5%;
   font-weight: 100;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
-  width: 100%;
-  height: 100vh;
   font-family: "Open Sans";
+  height: 100vh;
+  width: 100%;
 }
 
 h1 {
-  font-weight: 600;
   font-size: 3rem;
+  font-weight: 600;
 }
 
 h2 {
-  font-weight: 500;
   font-size: 2.5rem;
+  font-weight: 500;
 }
 
 h3 {
-  font-weight: 400;
   font-size: 2rem;
+  font-weight: 400;
 }
 
 h4 {
-  font-weight: 300;
   font-size: 1.8rem;
+  font-weight: 300;
 }
 
 p {
@@ -42,33 +42,93 @@ p {
   padding: 0;
 }
 
+/*main {
+  /*margin: 0 2%;*/
+  margin: 0 2rem;
+}*/
+
 .container {
-  width: 94vw;
   height: 94vw;
+  width: 94vw;
 }
 
-main {
-  margin: 0 2%;
+.home-background-container {
+  background-image: url(../images/mobilePortrait_v2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
-/*@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  h1 {
-    font-size: 4rem;
+.home-background-header {
+  color: #f12241;
+  letter-spacing: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8rem;
+  padding: 0 5rem;
+  position: absolute;
+  text-align: center;
+}
+
+.home-background-header-desktop-left,
+.home-background-header-desktop-right {
+  display: none;
+}
+
+
+@media only screen and (max-width: 767px) and (orientation:landscape) {
+  .home-background-container {
+    background-image: url(../images/mobileLandscape_v2.png);
+
   }
+}
 
-  p {
-    font-size: 2rem;
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-background-container {
+    background-image: url(../images/tabletPortrait.png);
+
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  h1 {
-    font-size: 4rem;
+  .home-background-container {
+    background:
+      url(../images/desktop_hd.png)
+      center center / cover
+      no-repeat
+      fixed;
+    height: 100vh;
+    width: 100%;
   }
 
-  p {
-    font-size: 3rem;
+  .red-rectangle {
+    background-color: #f12241;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
   }
-}*/
 
+  .home-background-header-desktop-left {
+    color: #f12241;
+    display: inline-block;
+    height: 100vh;
+    line-height: 100vh;
+    margin-left: -25rem;
+    white-space: nowrap;
+  }
 
+  .home-background-header-desktop-right {
+    color: #fff;
+    display: inline-block;
+    height: 100vh;
+    line-height: 100vh;
+    margin-left: 2rem;
+    white-space: nowrap;
+  }
+
+  .home-background-header {
+    display: none;
+  }
+}

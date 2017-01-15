@@ -7,8 +7,9 @@
   <!-- favicon -->
   <link rel="shortcut icon" href="images/favicon16.png" type="image/png">
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/home.css">
   <link rel="stylesheet" href="styles/nav_menu.css">
+  <link rel="stylesheet" href="styles/home.css">
+
   <script src="js/hamburger-menu.js"></script>
   <script src="js/button_click.js"></script>
 </head>
@@ -22,90 +23,32 @@
           <img class="logo" src="images/logo@0,1x.png" alt="logo pixelstories">
         </a>
       </div>
-      <a href="#" id="hamburg-menu" class="nav-menu-icon" onclick="toggleMenu()"></a>
-      <a href="#" id="close-hamburg-menu" class="nav-close-menu-icon" onclick="toggleMenu()"></a>
-      <nav id="toggle-menu" class="nav-menu-links">
-        <ul class="nav-menu">
-          <li><a href="index.html" title="Home">Home</a></li>
-          <li><a href="projects.html" title="Projects">Projects</a></li>
-          <li><a href="about.html" title="About us">About us</a></li>
-          <li><a href="contact.html" title="Contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="toggle-icon">
+        <img id="hamburg-menu" class="nav-menu-icon" src="images/hamburg-menu.png" alt="hamburg-menu" onclick="toggleMenu()">
+        <img id="close-hamburg-menu" class="nav-close-menu-icon" src="images/close-hamburg-menu.png" alt="close-hamburg-menu" onclick="toggleMenu()">
+      </div>
     </div>
+    <nav id="toggle-menu" class="nav-menu-container">
+      <ul class="nav-menu-list">
+        <li><a href="index.html" title="Home">Home</a></li>
+        <li><a href="projects.html" title="Projects">Projects</a></li>
+        <li><a href="about.html" title="About us">About us</a></li>
+        <li><a href="contact.html" title="Contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-  <!-- BACKGROUND IMAGE -->
-    <section class="container">
-      <div class="home-background-image">
-        <p id="text-right">The best designs</p>
+    <section>
+      <div class="home-background-container">
+        <h2 class="home-background-header">The best designs tell a story</h2>
       </div>
       <div class="red-rectangle">
-        <p id="text-left">tell a story</p>
-      </div>
-    </section>
-
-    <!-- OUR CONCEPT -->
-    <section class="container">
-      <div class="my-image our-concept-image">
-        <div class="concept-project-clients-about-rectangle">
-          <h1>Our Concept</h1>
-          <p class="my-usual-text">We love challenge, and are passionate about what we do, giving your brand image a life. We listen to your story and translate it into our design with our experience. Send your brand story to your audience! We help you to give a form to your brand.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- OUR PROJECTS -->
-    <section class="container">
-      <div class="my-image our-project-image">
-        <div class="concept-project-clients-about-rectangle">
-          <h1>Our projects</h1>
-          <p class="my-usual-text">We work together with a client, as a single team. So we can get better understanding of what exactly our clients need and offer the best solution. Our projects can include simple or advanced functionality, we create user-friendly interfaces with logical structures and harmonious design. We execute projects that bring results and help your business!</p>
-          <form>
-            <input type="button" name="button" value="Read more" class="all-buttons" onclick="buttonClickProjects()">
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- OUR CLIENTS -->
-    <section class="container">
-      <div class="my-image our-clients-image">
-        <div class="concept-project-clients-about-rectangle-transparent">
-          <h1>Some of our clients</h1>
-          <figure></figure>
-          <figure></figure>
-          <figure></figure>
-          <figure></figure>
-          <figure></figure>
-          <figure></figure>
-        </div> 
-      </div>
-    </section>
-
-    <!-- ABOUT US -->
-    <section class="container">
-      <div class="my-image our-about-us-image">
-        <div class="concept-project-clients-about-rectangle-transparent">
-          <h1>About us</h1>
-          <p class="my-usual-text">We are creative digital-web bureau. We can clearly and consistently tell the stories about the design. We do design and develop websites, and we get result. Our professional team knows the most efficient and fastest way to the top. </p>
-          <form>
-            <input type="button" name="button" value="Read more" class="all-buttons" onclick="buttonClickAbout()">
-          </form>
-        </div>
+        <h1 class="home-background-header-desktop-left">The best designs</h1>
+        <h1 class="home-background-header-desktop-right">tell a story</h1>
       </div>
     </section>
   </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Pixel Stories</p>
-    <p>Tomtebodavägen 3A</p>
-    <p>171 65, Solna</p>
-    <p>08-466 60 00</p>
-    <p>pixelstories.se</p>
-  </footer>
 
 </body>
 </html>
