@@ -278,28 +278,27 @@ main {
 
 @media only screen and (min-width: 1024px) {
   .our-clients-container {
+    display: block;
     margin-top: 1rem;
     position: relative;
-    display: block;
   }
 
   .our-clients-background {
     background-color: #fff;
     border: .1rem solid #c5c2c2;
-    height: 100vh;
     display: block;
+    height: 100vh;
     width: auto;
   }
 
   .clients-rectangle {
     background-color: transparent;
+    display: block;
     height: 60vh;
     padding: 2rem;
     position: absolute;
     text-align: center;
     top: 15%;
-    display: block;
-
   }
 }
 

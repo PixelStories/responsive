@@ -6,8 +6,8 @@
   <title>Pixel Stories</title>
   <link rel="shortcut icon" href="images/favicon16.png" type="image/png">
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/projects.css">
   <link rel="stylesheet" href="styles/nav_menu.css">
+  <link rel="stylesheet" href="styles/projects.css">
   <script src="js/hamburger-menu.js"></script>
   <script src="js/button_click.js"></script>
 </head>
@@ -16,71 +16,64 @@
   <!-- NAVIGATION MENU -->
   <header>
     <div class="fixed-menu">
-      <div class="logo">
+      <div class="logo-container">
         <a href="index.html">
-          <img srcset="images/logo@0,1x.png 320w, 
-                       images/logo@0,25x.png 640w,
-                       images/logo@0,5x.png 1240w"
-               sizes="50vw"
-               src="images/logo@0,1x.png"
-               alt="logo pixelstories">
+          <img class="logo" src="images/logo@0,1x.png" alt="logo pixelstories">
         </a>
       </div>
-      <a href="#" id="hamburg-menu" class="nav-menu-icon" onclick="toggleMenu()"></a>
-      <a href="#" id="close-hamburg-menu" class="nav-close-menu-icon" onclick="toggleMenu()"></a>
-      <nav id="toggle-menu" class="nav-menu-links">
-        <ul class="nav-menu">
-          <li><a href="index.html" title="Home">Home</a></li>
-          <li><a href="projects.html" title="Projects">Projects</a></li>
-          <li><a href="about.html" title="About us">About us</a></li>
-          <li><a href="contact.html" title="Contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="toggle-icon">
+        <img id="hamburg-menu" class="nav-menu-icon" src="images/hamburg-menu.png" alt="hamburg-menu" onclick="toggleMenu()">
+        <img id="close-hamburg-menu" class="nav-close-menu-icon" src="images/close-hamburg-menu.png" alt="close-hamburg-menu" onclick="toggleMenu()">
+      </div>
     </div>
+    <nav id="toggle-menu" class="nav-menu-container">
+      <ul class="nav-menu-list">
+        <li><a href="index.html" title="Home">Home</a></li>
+        <li><a href="projects.html" title="Projects">Projects</a></li>
+        <li><a href="about.html" title="About us">About us</a></li>
+        <li><a href="contact.html" title="Contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-  <!-- OUR PROJECTS -->
-    <section class="container">
-      <div class="center-header project-background-image">
-        <h1>Our projects</h1>
+    <!-- PROJECT-BACKGROUND BILD -->
+    <section>
+      <div class="project-container">
+        <div class="project-background">
+          <h2 class="center-header">Our projects</h2>
+        </div>
       </div>
     </section>
 
-    <!-- PROJECT 1 AND PROJECT 2 -->
-    <section class="container">
-      <!-- PROJECT 1 -->
-      <div class="container-element">
-        <div class="frond-end">
-          <img src="images/example1.png" alt="project" class="all-projects-image">
-        </div>
-        <div class="back-end">
-          
-        </div>
-        
+    <!-- PROJECT 1, 2, 3, 4 BILD -->
+    <section>
+      <div class="project-element-container">
+        <div class="project-element-background-1"></div>
       </div>
-      <!-- PROJECT 2 -->
-      <div class="container-element"> 
-        <img src="images/example2.png" alt="project" class="all-projects-image">
+      <div class="project-element-container">
+        <div class="project-element-background-2"></div>
       </div>
-      <!-- PROJECT 3 -->
-      <div class="container-element">
-        <img src="images/example3.png" alt="project" class="all-projects-image">
+      <div class="project-element-container">
+        <div class="project-element-background-3"></div>
       </div>
-      <!-- PROJECT 4 -->
-      <div class="container-element">
-        <img src="images/example4.png" alt="project" class="all-projects-image">
+      <div class="project-element-container">
+        <div class="project-element-background-4"></div>
+      </div>
+      <div class="project-element-container-responsive">
+        <div class="project-element-background-responsive"></div>
       </div>
     </section>
   </main>
-
+  
+  <!-- FOOTER -->
   <footer>
     <p>Pixel Stories</p>
     <p>Tomtebodavägen 3A</p>
     <p>171 65, Solna</p>
     <p>08-466 60 00</p>
     <p>pixelstories.se</p>
-  </footer> -->
+  </footer>
 
 </body>
 </html>

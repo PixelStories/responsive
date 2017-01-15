@@ -1,447 +1,212 @@
-/* ------------------------------------------------------------------------------------------------------------------------------------------
+/* -------------------------------------------------------------------------------------------------------------------------
   GENERAL SETTINGS
---------------------------------------------------------------------------------------------------------------------------------------------- */
+---------------------------------------------------------------------------------------------------------------------------- */
 /* Detta sättas från 0px till 767px - mobile first */
 
-/* ------------------------------------------
-  HEADERS
---------------------------------------------- */
+html {
+  font-size: 62.5%;
+  font-weight: 100;
+  height: 100vh;
+  width: 100vw;
+}
+
 body {
   font-family: "Open Sans";
+  height: 100vh;
+  width: 100%;
 }
 
 h1 {
+  font-size: 3rem;
   font-weight: 600;
-  font-size: 3em;
 }
 
 h2 {
+  font-size: 2.5rem;
   font-weight: 500;
-  font-size: 2.5em;
 }
 
 h3 {
+  font-size: 2rem;
   font-weight: 400;
-  font-size: 2em;
 }
 
 h4 {
+  font-size: 1.8rem;
   font-weight: 300;
-  font-size: 1.5em;
 }
 
-/* ------------------------------------------
-  CONTAINERS
---------------------------------------------- */
+p {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0 2%;
+}
+
 .container {
-  width: 100%;
-  height: 100vh;
+  height: 94vw;
+  width: 94vw;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+    h2 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 3rem;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------
+  PROJECT-BACKGROUND BILD
+---------------------------------------------------------------------------------------------------------------------------- */
+.project-container {
+  display: none;
+}
+
+@media only screen and (min-width: 1024px) {
+  .project-container {
+    display: block;
+  }
+
+  .project-background {
+    background-image: url(../images/project_desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100vh;
+    position: relative;
+    width: auto;
+  }
+
+  .center-header {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------
+  PROJECT 1, 2, 3, 4 BILD
+---------------------------------------------------------------------------------------------------------------------------- */
+.project-element-container {
+  margin-top: 1rem;
   position: relative;
 }
 
-
-
-.container-element {
-  width: 49%;
-  height: 50vh;
-  display: inline-block;
-}
-
-/* ------------------------------------------
-  USUAL TEXT
---------------------------------------------- */
-.my-usual-text {
-  font-family: "Open Sans";
-  font-weight: 400;
-  font-size: 2rem;
-  text-align: center;
-}
-
-/* ------------------------------------------
-  IMAGES
---------------------------------------------- */
-.my-image {
-  background-size: cover;
-  margin-left: 1rem;
-  margin-right: 1rem;
-  margin-top: 1rem;
-  height: 100vh;
-}
-
-/* ------------------------------------------
-  BUTTONS
---------------------------------------------- */
-.all-buttons {
-  background-color: #f12241;
-  border-radius: 1rem;
-  border: 1px solid #272727;
-  text-align: center;
-  margin: 0 auto;
-  position: absolute;
-  left: 47%;
-  cursor: pointer;
-}
-
-/* ------------------------------------------
-  RESPONSIVE LOGO, NAVIGATION MENU, FIXED HEADER
---------------------------------------------- */
-.logo {
-  margin: 0 2rem;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.fixed-menu {
-  background: #fff;
-  border-bottom: 1px solid #000;
-  height: 4.75rem;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-.nav-menu-links {
-  padding: 0 2rem;
-  position: absolute;
-  right: 0;
-}
-
-.nav-menu-icon {
-  background: url(../images/hamburg-menu.png) center;
-}
-
-.nav-close-menu-icon {
-  background: url(../images/close-hamburg-menu.png) center;
-}
-
-.nav-menu-icon,
-.nav-close-menu-icon {
+.project-element-background-1 {
+  background-image: url(../images/project1_mobile_port.png);
   background-repeat: no-repeat;
-  display: hidden;
-  height: 40px;
-  width: 40px;
-}
-
-.nav-menu {
-  list-style: none;
-}
-
-.nav-menu li {
-  display: inline-block;
-  padding: .9rem
-}
-
-.nav-menu a {
-  color: #000;
-  text-decoration: none;
-}
-
-.nav-menu a:hover {
-  background-color: transparent;
-  text-decoration: underline;
-}
-
-@media only screen and (max-width: 1023px) {
-  .nav-menu-icon,
-  .nav-close-menu-icon {
-    display:inline-block;
-    margin: 0 2rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .nav-close-menu-icon {
-    visibility: hidden;
-  }
-
-  .nav-menu li {
-    margin: 0;
-    padding: 10px 0;
-    text-align: center;
-    text-align: right;
-    width: 100%;
-  }
-
-  .nav-menu a {
-    color: #fff;
-  }
-
-  .nav-menu-links {
-    background-color: #272727;
-    border: 1px solid #000;
-    height: 50vh;
-    opacity: .8;
-    top: 4.72rem;
-    visibility: hidden;
-    width: 40%;
-  }
-}
-
-.show-menu {
-  visibility: visible;
-}
-
-/* ------------------------------------------------------------------------------------------------------------------------------------------
-  INDEX.HTML
---------------------------------------------------------------------------------------------------------------------------------------------- */
-/* ------------------------------------------
-  BACKGROUND IMAGE
---------------------------------------------- */
-.home-background-image {
-  background-image: url(../images/Desktop.png);
-  position: absolute;
-  width: 70%;
-}
-
-.red-rectangle {
-  background-color: #f12241;
-  height: 100vh;
-  position: absolute;
-  right: 0;
-  width: 30%;
-}
-
-#text-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#text-left {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-@media only screen and (min-width: 1024px) and (orientation:landscape) {
-  .home-background-image {
-    background-image: url(../images/Desktop.png);
-    background-size: cover;
-    height: 100vh;
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .home-background-image {
-    background-image: url(../images/tabletPortrait.png);
-    background-size: cover;
-    height: 100vmin;
-    width: 100vmin;
-  }
-
-  .red-rectangle,
-  #text-right,
-  #text-left {
-    display: none;
-  }
+  background-size: cover;
+  height: 40rem;
+  width: auto;
 }
 
 @media only screen and (max-width: 767px) and (orientation:landscape) {
-  .home-background-image {
-    background-image: url(../images/mobileLandscape_v2.png);
-    background-size: cover;
-    height: 100vmin;
-    width: 100%;
-  }
 
-  .red-rectangle,
-  #text-right,
-  #text-left {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 767px) and (orientation:portrait) {
-  .home-background-image {
-    background-image: url(../images/mobilePortrait_v2.png);
-    background-size: cover;
-    height: 100vmin;
-    width: 100vmin;
-  }
-
-  .red-rectangle,
-  #text-right,
-  #text-left {
-    display: none;
-  }
-}
-
-/* ------------------------------------------
-  CONCEPT
---------------------------------------------- */
-.our-concept-image {
-  background-image: url(../images/about_desktop.jpg);
-}
-
-.concept-project-clients-about-rectangle {
-  background-color: #615F5F;
-  height: 60vh;
-  margin-right: 1rem;
-  position: absolute;
-  top: 15%;
-  opacity: 0.8;
-  text-align: center;
-  padding: 2rem;
-}
-
-@media only screen and (min-width: 1024px) and (orientation:landscape) {
-  .our-concept-image {
-    background-image: url(../images/about_desktop.jpg);
-    background-size: cover;
-    height: 100vh;
-  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .our-concept-image {
-    background-image: url(../images/about_mobile_portrait.jpg);
-    background-size: cover;
-    height: 100vmin;
-    width: 100vmin;
-  }
 
-.concept-project-clients-about-rectangle {
-    background-color: transparent;
-  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+}
+
+.project-element-background-2 {
+  background-image: url(../images/project2_mobile_port.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  width: auto;
 }
 
 @media only screen and (max-width: 767px) and (orientation:landscape) {
-  .our-concept-image {
-    background-image: url(../images/about_land_mob.png);
-    background-size: cover;
-    height: 100vmin;
-    width: 100%;
-  }
 
-.concept-project-clients-about-rectangle {
-    background-color: transparent;
-  }
 }
 
-@media only screen and (max-width: 767px) and (orientation:portrait) {
-  .our-concept-image {
-    background-image: url(../images/about_port_mob.png);
-    background-size: cover;
-    height: 100vmin;
-    width: 100vmin;
-  }
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 
-.concept-project-clients-about-rectangle {
-    background-color: transparent;
-  }
 }
 
-/* ------------------------------------------
-  PROJECTS
---------------------------------------------- */
-.our-project-image {
-  background-image: url(../images/project_desktop.jpg);
-}
-
-
-
-/* ------------------------------------------
-  CLIENTS
---------------------------------------------- */
-.our-clients-image {
-  background-color: #c5c2c2;
-}
-
-.concept-project-clients-about-rectangle-transparent {
-  background-color: transparent;
-  height: 60vh;
-  position: absolute;
-  top: 15%;
-  opacity: 0.8;
-  text-align: center;
-  padding: 2rem;
-}
-
-/* ------------------------------------------
-  ABOUT US
---------------------------------------------- */
-.our-about-us-image {
-  background-color: #615f5f;
-}
-
-
-
-/* ------------------------------------------------------------------------------------------------------------------------------------------
-  PROJECTS.HTML
---------------------------------------------------------------------------------------------------------------------------------------------- */
-/* ------------------------------------------
-  GENERAL SETTINGS FOR PROJECTS
---------------------------------------------- */
-.all-projects-image {
-  width: 100%;
-}
-
-/* ------------------------------------------
-  BACKGROUND IMAGE
---------------------------------------------- */
-.project-background-image {
-  background-image: url(../images/project_desktop.jpg);
-}
-
-.center-header {
-  text-align: center;
-  vertical-align: middle;
-  line-height: 100vh;
-}
-
-/* ------------------------------------------
-  PROJECT 1
---------------------------------------------- */
-
-
-
-/* ------------------------------------------
-  PROJECT 2
---------------------------------------------- */
-
-
-
-/* ------------------------------------------
-  PROJECT 3
---------------------------------------------- */
-
-
-
-/* ------------------------------------------
-  PROJECT 4
---------------------------------------------- */
-
-
-
-
-
-/* ------------------------------------------------------------------------------------------------------------------------------------------
-  ABOUT.HTML
---------------------------------------------------------------------------------------------------------------------------------------------- */
-/* ------------------------------------------
+@media only screen and (min-width: 1024px) {
   
---------------------------------------------- */
+}
 
+.project-element-background-3 {
+  background-image: url(../images/project3_mobile_port.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  width: auto;
+}
 
+@media only screen and (max-width: 767px) and (orientation:landscape) {
 
+}
 
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 
+}
 
-
-
-
-
-/* ------------------------------------------------------------------------------------------------------------------------------------------
-  CONTACT.HTML
---------------------------------------------------------------------------------------------------------------------------------------------- */
-/* ------------------------------------------
+@media only screen and (min-width: 1024px) {
   
---------------------------------------------- */
+}
+
+.project-element-background-4 {
+  background-image: url(../images/project4_mobile_port.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  width: auto;
+}
+
+@media only screen and (max-width: 767px) and (orientation:landscape) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media only screen and (min-width: 1024px) {
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
