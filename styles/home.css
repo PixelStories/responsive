@@ -164,7 +164,7 @@ main {
 /* -------------------------------------------------------------------------------------------------------------------------
   OUR CONCEPT
 ---------------------------------------------------------------------------------------------------------------------------- */
-.our-concept-container {
+.our-container {
   margin-top: 1rem;
   position: relative;
 }
@@ -221,11 +221,6 @@ main {
 /* -------------------------------------------------------------------------------------------------------------------------
   OUR PROJECTS
 ---------------------------------------------------------------------------------------------------------------------------- */
-.our-projects-container {
-  margin-top: 1rem;
-  position: relative;
-}
-
 .our-projects-background {
   background-image: url(../images/projects_mobile_port.jpg);
   background-repeat: no-repeat;
@@ -274,6 +269,39 @@ main {
   }
 }
 
+/* -------------------------------------------------------------------------------------------------------------------------
+  OUR CLIENTS
+---------------------------------------------------------------------------------------------------------------------------- */
+.our-clients-container,
+.our-clients-background,
+.clients-rectangle {
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 1024px) {
+  .our-clients-container {
+    margin-top: 1rem;
+    position: relative;
+    visibility: visible;
+  }
+
+  .our-clients-background {
+    background-color: #c5c2c2;
+    height: 100vh;
+    visibility: visible;
+    width: auto;
+  }
+
+  .clients-rectangle {
+    background-color: transparent;
+    height: 60vh;
+    padding: 2rem;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    visibility: visible;
+  }
+}
 
 
 
