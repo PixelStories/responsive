@@ -272,24 +272,22 @@ main {
 /* -------------------------------------------------------------------------------------------------------------------------
   OUR CLIENTS
 ---------------------------------------------------------------------------------------------------------------------------- */
-.our-clients-container,
-.our-clients-background,
-.clients-rectangle {
-  visibility: hidden;
+.our-clients-container {
+  display: none;
 }
 
 @media only screen and (min-width: 1024px) {
   .our-clients-container {
     margin-top: 1rem;
     position: relative;
-    visibility: visible;
+    display: block;
   }
 
   .our-clients-background {
     background-color: #fff;
     border: .1rem solid #c5c2c2;
     height: 100vh;
-    visibility: visible;
+    display: block;
     width: auto;
   }
 
@@ -300,7 +298,8 @@ main {
     position: absolute;
     text-align: center;
     top: 15%;
-    visibility: visible;
+    display: block;
+
   }
 }
 
