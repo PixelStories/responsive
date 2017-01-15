@@ -183,7 +183,7 @@ main {
   padding: 2rem;
   position: absolute;
   text-align: center;
-  top: 15%;
+  top: 17%;
 }
 
 .text-center-paragraf {
@@ -286,7 +286,8 @@ main {
   }
 
   .our-clients-background {
-    background-color: #c5c2c2;
+    background-color: #fff;
+    border: .1rem solid #c5c2c2;
     height: 100vh;
     visibility: visible;
     width: auto;
@@ -302,6 +303,45 @@ main {
     visibility: visible;
   }
 }
+
+/* -------------------------------------------------------------------------------------------------------------------------
+  ABOUT US
+---------------------------------------------------------------------------------------------------------------------------- */
+.about-us-background {
+  background-image: url(../images/about_mobile_port.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40rem;
+  width: auto;
+}
+
+@media only screen and (max-width: 767px) and (orientation:landscape) {
+  .about-us-background {
+    background-image: url(../images/about-mobile_land.png);
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .about-us-background {
+    background-image: url(../images/about-tablet-port.png);
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .about-us-background {
+    background-image: url(../images/about-desktop.jpg);
+    height: 100vh;
+  }
+
+  .concept-project-clients-about-rectangle {
+    background-color: #615F5F;
+    opacity: .8;
+  }
+}
+
+
 
 
 
