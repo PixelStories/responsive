@@ -111,7 +111,40 @@ main {
 /* -------------------------------------------------------------------------------------------------------------------------
   PROJECT 1, 2, 3, 4 BILD
 ---------------------------------------------------------------------------------------------------------------------------- */
+.container-div {
+  overflow: hidden;
+  width: 100%;
+}
+
 .project-element-container {
+  white-space: nowrap;
+  margin-top: 3rem;
+}
+
+
+.project-element-background-1 {
+  background-image: url(../images/project4_desktop_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 47vw;
+  height: 47vh;
+  display: inline-block;
+}
+
+
+
+.project-element-background-2 {
+  background-image: url(../images/project4_desktop_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 47vw;
+  height: 47vh;
+  display: inline-block;
+  float: right;
+}
+
+
+/*.project-element-container {
   margin-top: 1rem;
   position: relative;
   width: 100%;
@@ -166,7 +199,7 @@ main {
 }
 
 .project-element-background-3 {
-  background-image: url(../images/project3_mobile_port.png);
+  background-image: url(../images/project3_mobile_port.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 96vw;
@@ -190,11 +223,12 @@ main {
 }
 
 .project-element-background-4 {
-  background-image: url(../images/project4_mobile_port.png);
+  background-image: url(../images/xxalkdwozso-adel-ben.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 40rem;
-  width: auto;
+  height: 96vw;
+  width: 96vw;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 767px) and (orientation:landscape) {
@@ -208,7 +242,7 @@ main {
 @media only screen and (min-width: 1024px) {
   
 }
-
+*/
 
 
 
