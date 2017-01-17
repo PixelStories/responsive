@@ -114,6 +114,7 @@ main {
 .project-element-container {
   margin-top: 1rem;
   position: relative;
+  width: 100%;
 }
 
 .project-element-background-1 {
@@ -122,6 +123,7 @@ main {
   background-size: cover;
   height: 96vw;
   width: 96vw;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 767px) and (orientation:landscape) {
@@ -131,56 +133,60 @@ main {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
-}
-
 @media only screen and (min-width: 1024px) {
   .project-element-background-1 {
     background-image: url(../images/project1_desktop.jpg);
-    height: 50vh;
-    width: 50vw;
+    height: 47vh;
+    width: 47vw;
   }
 }
 
 .project-element-background-2 {
-  background-image: url(../images/project2_mobile_port.png);
+  background-image: url(../images/project2_mobile_port.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 40rem;
-  width: auto;
+  height: 96vw;
+  width: 96vw;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 767px) and (orientation:landscape) {
-
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
+  .project-element-background-2 {
+    background-image: url(../images/project2_mobile_land.jpg);
+    height: 100vh;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  
+  .project-element-background-2 {
+    background-image: url(../images/project2_desktop.jpg);
+    height: 47vh;
+    width: 47vw;
+  }
 }
 
 .project-element-background-3 {
   background-image: url(../images/project3_mobile_port.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 40rem;
-  width: auto;
+  height: 96vw;
+  width: 96vw;
+  display: inline-block;
 }
 
 @media only screen and (max-width: 767px) and (orientation:landscape) {
-
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-
+  .project-element-background-3 {
+    background-image: url(../images/project3_mobile_land.jpg);
+    height: 100vh;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-  
+  .project-element-background-3 {
+    background-image: url(../images/project3_desktop.jpg);
+    height: 47vh;
+    width: 47vw;
+  }
 }
 
 .project-element-background-4 {
