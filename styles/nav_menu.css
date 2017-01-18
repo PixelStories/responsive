@@ -1,7 +1,14 @@
 /* ---------------------------------------------
   RESPONSIVE LOGO, NAVIGATION MENU, FIXED HEADER
 ------------------------------------------------ */
-/* Detta sättas från 0px till 767px - mobile first */
+/* media queries
+648px = 40.5em
+767px = 47.9375em
+768px = 48em
+1023px = 63.9375em
+1024px = 64em */
+
+/* Detta sättas från 0 till 40.5em - mobile first */
 
 .fixed-menu {
   background: #fff;
@@ -50,14 +57,14 @@
 
 .nav-menu-container {
   background-color: #272727;
-  height: 50vh;
+  height: 80vh;
   opacity: .8;
   position: fixed;
   right: 0;
   text-align: right;
   padding-top: 4rem;
   display: none;
-  width: 40%;
+  width: 50%;
   z-index: 99;
 }
 
@@ -73,7 +80,7 @@
 
 .nav-menu-list a {
   color: #fff;
-  font-size: large;
+  font-size: 4rem;
   text-decoration: none;
 }
 
@@ -81,13 +88,13 @@
   display: block;
 }
 
-@media only screen and (max-width: 767px) and (orientation:landscape) {
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
   .nav-menu-container {
-    height: 100vh;
+    height: 80vh;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .toggle-icon {
     display: none;
   }
@@ -108,6 +115,7 @@
 
   .nav-menu-list a {
     color: #000;
+    font-size: large;
   }
 
   .nav-menu-list a:hover {

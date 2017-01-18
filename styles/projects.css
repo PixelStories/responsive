@@ -1,7 +1,14 @@
 /* -------------------------------------------------------------------------------------------------------------------------
   GENERAL SETTINGS
 ---------------------------------------------------------------------------------------------------------------------------- */
-/* Detta sättas från 0px till 767px - mobile first */
+/* media queries
+648px = 40.5em
+767px = 47.9375em
+768px = 48em
+1023px = 63.9375em
+1024px = 64em */
+
+/* Detta sättas från 0 till 40.5em - mobile first */
 
 html {
   font-size: 62.5%;
@@ -51,7 +58,7 @@ main {
   width: 94vw;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 48em) and (max-width: 63.9375em) {
   h1 {
     font-size: 4rem;
   }
@@ -65,7 +72,7 @@ main {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   h1 {
     font-size: 5rem;
   }
@@ -85,7 +92,7 @@ main {
   display: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .project-container {
     display: block;
   }
@@ -117,7 +124,7 @@ main {
   width: 100%;
 }
 
-.project-element-background-1 {
+#project-element-background-1 {
   background-image: url(../images/project1_mobile_port.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -126,15 +133,15 @@ main {
   display: inline-block;
 }
 
-@media only screen and (max-width: 767px) and (orientation:landscape) {
-  .project-element-background-1 {
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
+  #project-element-background-1 {
     background-image: url(../images/project1_mobile_land.jpg);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .project-element-background-1 {
+@media only screen and (min-width: 64em) {
+  #project-element-background-1 {
     background-image: url(../images/project1_desktop.jpg);
     height: 47vh;
     width: 47vw;
@@ -142,7 +149,7 @@ main {
   }
 }
 
-.project-element-background-2 {
+#project-element-background-2 {
   background-image: url(../images/project2_mobile_port.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -151,15 +158,15 @@ main {
   display: inline-block;
 }
 
-@media only screen and (max-width: 767px) and (orientation:landscape) {
-  .project-element-background-2 {
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
+  #project-element-background-2 {
     background-image: url(../images/project2_mobile_land.jpg);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .project-element-background-2 {
+@media only screen and (min-width: 64em) {
+  #project-element-background-2 {
     background-image: url(../images/project2_desktop.jpg);
     height: 47vh;
     width: 47vw;
@@ -177,14 +184,14 @@ main {
   display: inline-block;
 }
 
-@media only screen and (max-width: 767px) and (orientation:landscape) {
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
   .project-element-background-3 {
     background-image: url(../images/project3_mobile_land.jpg);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .project-element-background-3 {
     background-image: url(../images/project3_desktop.jpg);
     height: 47vh;
@@ -202,14 +209,14 @@ main {
   display: inline-block;
 }
 
-@media only screen and (max-width: 767px) and (orientation:landscape) {
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
   .project-element-background-4 {
     background-image: url(../images/project4_mobile_land.jpg);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .project-element-background-4 {
     background-image: url(../images/project4_desktop.jpg);
     height: 47vh;
@@ -223,7 +230,7 @@ main {
   display: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .project-element-container-responsive {
     display: block;
   }

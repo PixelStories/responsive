@@ -1,7 +1,14 @@
 /* -------------------------------------------------------------------------------------------------------------------------
   GENERAL SETTINGS
 ---------------------------------------------------------------------------------------------------------------------------- */
-/* Detta sättas från 0px till 767px - mobile first */
+/* media queries
+648px = 40.5em
+767px = 47.9375em
+768px = 48em
+1023px = 63.9375em
+1024px = 64em */
+
+/* Detta sättas från 0 till 40.5em - mobile first */
 
 html {
   font-size: 62.5%;
@@ -51,7 +58,7 @@ main {
   width: 94vw;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 48em) and (max-width: 63.9375em) {
   h1 {
     font-size: 4rem;
   }
@@ -65,7 +72,7 @@ main {
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   h1 {
     font-size: 5rem;
   }
@@ -104,20 +111,20 @@ main {
   display: none;
 }
 
-@media only screen and (max-width: 767px) and (orientation:landscape) {
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
   .home-background-container {
     background-image: url(../images/mobileLandscape_v2.png);
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 48em) and (max-width: 63.9375em) {
   .home-background-container {
     background-image: url(../images/tabletPortrait.png);
 
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .home-background-container {
     background:
       url(../images/desktop_hd.png)
@@ -192,21 +199,21 @@ main {
   text-align: justify;
 }
 
-@media only screen and (max-width: 767px) and (orientation:landscape) {
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
   .our-concept-background {
     background-image: url(../images/concept-mobile_land.png);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 48em) and (max-width: 63.9375em) {
   .our-concept-background {
     background-image: url(../images/concept-tablet-port.png);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .our-concept-background {
     background-image: url(../images/concept-desktop.jpg);
     height: 100vh;
@@ -244,21 +251,29 @@ main {
   width: 10rem;
 }
 
-@media only screen and (max-width: 767px) and (orientation:landscape) {
+.all-buttons:hover {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
   .our-projects-background {
     background-image: url(../images/project_mobile_land.png);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 48em) and (max-width: 63.9375em) {
   .our-projects-background {
     background-image: url(../images/project_tablet_port.png);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .our-projects-background {
     background-image: url(../images/project_desktop.jpg);
     height: 100vh;
@@ -277,7 +292,7 @@ main {
   display: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .our-clients-container {
     display: block;
     margin-top: 1rem;
@@ -314,21 +329,21 @@ main {
   width: auto;
 }
 
-@media only screen and (max-width: 767px) and (orientation:landscape) {
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
   .about-us-background {
     background-image: url(../images/about-mobile_land.png);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 48em) and (max-width: 63.9375em) {
   .about-us-background {
     background-image: url(../images/about-tablet-port.png);
     height: 100vh;
   }
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 64em) {
   .about-us-background {
     background-image: url(../images/about-desktop.jpg);
     height: 100vh;
