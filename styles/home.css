@@ -93,6 +93,7 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  margin-left: -2%;
 }
 
 .home-background-header {

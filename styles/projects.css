@@ -95,6 +95,8 @@ main {
 @media only screen and (min-width: 64em) {
   .project-container {
     display: block;
+    margin-left: -2%;
+    margin-right: -2%;
   }
 
   .project-background {
