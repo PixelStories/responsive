@@ -1,0 +1,340 @@
+/* -------------------------------------------------------------------------------------------------------------------------
+  GENERAL SETTINGS
+---------------------------------------------------------------------------------------------------------------------------- */
+/* media queries
+648px = 40.5em
+767px = 47.9375em
+768px = 48em
+1023px = 63.9375em
+1024px = 64em */
+
+/* Detta sättas från 0 till 40.5em - mobile first */
+
+html {
+  font-size: 62.5%;
+  font-weight: 100;
+  height: auto;
+  width: 100vw;
+}
+
+body {
+  font-family: "Open Sans";
+  height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0 2%;
+}
+
+.container {
+  height: 94vw;
+  width: 94vw;
+}
+
+@media only screen and (min-width: 48em) and (max-width: 63.9375em) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  h1 {
+    font-size: 5rem;
+  }
+    h2 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 3rem;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------
+  PROJECT-BACKGROUND BILD
+---------------------------------------------------------------------------------------------------------------------------- */
+.project-container {
+  display: none;
+}
+
+@media only screen and (min-width: 64em) {
+  .project-container {
+    display: block;
+    margin-left: -2%;
+    margin-right: -2%;
+  }
+
+  .project-background {
+    background-image: url(../images/project_desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    height: 100vh;
+    position: relative;
+    width: auto;
+  }
+
+  .center-header {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------
+  PROJECT 1, 2, 3, 4 BILD
+---------------------------------------------------------------------------------------------------------------------------- */
+.project-element-container {
+  margin-top: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+#project-element-background-1 {
+  background-image: url(../images/project1_mobile_port.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 96vw;
+  width: 96vw;
+  display: inline-block;
+}
+
+#back {
+  display: none;
+}
+
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
+  #project-element-background-1 {
+    background-image: url(../images/project1_mobile_land.jpg);
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  #project-element-background-1 {
+    background-image: url(../images/project1_desktop.jpg);
+    height: 47vh;
+    width: 47vw;
+    margin-top: 2rem;
+    transition: all 500ms ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+  }
+
+  #project-element-background-1:after {
+    content: "";
+    width: 47vw;
+    height: 47vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: url(../images/project1_desktop_back.jpg) no-repeat;
+    background-size: cover;
+    -webkit-transform: rotateY( 180deg );
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+  }
+
+  #project-element-background-1:hover {
+    transform: rotateY(-210deg);
+  }
+}
+
+#project-element-background-2 {
+  background-image: url(../images/project2_mobile_port.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 96vw;
+  width: 96vw;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
+  #project-element-background-2 {
+    background-image: url(../images/project2_mobile_land.jpg);
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  #project-element-background-2 {
+    background-image: url(../images/project2_desktop.jpg);
+    height: 47vh;
+    width: 47vw;
+    float: right;
+    margin-top: 2rem;
+    transition: all 500ms ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+  }
+
+  #project-element-background-2:after {
+    content: "";
+    width: 47vw;
+    height: 47vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: url(../images/project2_desktop_back.jpg) no-repeat;
+    background-size: cover;
+    -webkit-transform: rotateY( 180deg );
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+  }
+
+  #project-element-background-2:hover {
+    transform: rotateY(-210deg);
+  }
+}
+
+#project-element-background-3 {
+  background-image: url(../images/project3_mobile_port.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 96vw;
+  width: 96vw;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
+  #project-element-background-3 {
+    background-image: url(../images/project3_mobile_land.jpg);
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  #project-element-background-3 {
+    background-image: url(../images/project3_desktop.jpg);
+    height: 47vh;
+    width: 47vw;
+    margin-top: 2rem;
+    transition: all 500ms ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+  }
+
+  #project-element-background-3:after {
+    content: "";
+    width: 47vw;
+    height: 47vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: url(../images/project3_desktop_back.jpg) no-repeat;
+    background-size: cover;
+    -webkit-transform: rotateY( 180deg );
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+  }
+
+  #project-element-background-3:hover {
+    transform: rotateY(-210deg);
+  }
+}
+
+#project-element-background-4 {
+  background-image: url(../images/project4_mobile_port.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 96vw;
+  width: 96vw;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
+  #project-element-background-4 {
+    background-image: url(../images/project4_mobile_land.jpg);
+    height: 100vh;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  #project-element-background-4 {
+    background-image: url(../images/project4_desktop.jpg);
+    height: 47vh;
+    width: 47vw;
+    float: right;
+    margin-top: 2rem;
+    transition: all 500ms ease-in-out;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+  }
+
+   #project-element-background-4:after {
+    content: "";
+    width: 47vw;
+    height: 47vh;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: url(../images/project4_desktop_back.jpg) no-repeat;
+    background-size: cover;
+    -webkit-transform: rotateY( 180deg );
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+  }
+
+  #project-element-background-4:hover {
+    transform: rotateY(-210deg);
+  }
+}
+
+.project-element-container-responsive {
+  display: none;
+}
+
+@media only screen and (min-width: 64em) {
+  .project-element-container-responsive {
+    display: block;
+  }
+
+  .project-element-background-responsive {
+    background-image: url(../images/project-res.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 96vw;
+    margin-top: 2rem;
+  }
+
+  .responsive-design-text {
+  padding: 2rem;
+  }
+}

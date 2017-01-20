@@ -1,0 +1,124 @@
+/* ---------------------------------------------
+  RESPONSIVE LOGO, NAVIGATION MENU, FIXED HEADER
+------------------------------------------------ */
+/* media queries
+648px = 40.5em
+767px = 47.9375em
+768px = 48em
+1023px = 63.9375em
+1024px = 64em */
+
+/* Detta sättas från 0 till 40.5em - mobile first */
+
+.fixed-menu {
+  background: #fff;
+  border-bottom: 1px solid #000; /* kan tas bort senare */
+  height: 4rem;
+  left: 0;
+  overflow:auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.logo-container {
+  margin: 0 2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20%;
+}
+
+.logo {
+  height: auto;
+  max-height: 3.5rem;
+  max-width: 100%;
+}
+
+.toggle-icon {
+  height: 2.2rem;
+  margin: 0 2rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.2rem;
+}
+
+.nav-menu-icon,
+.nav-close-menu-icon {
+  max-width: 100%;
+}
+
+.nav-close-menu-icon {
+  display: none;
+}
+
+.nav-menu-container {
+  background-color: #272727;
+  height: 80vh;
+  opacity: .8;
+  position: fixed;
+  right: 0;
+  text-align: right;
+  padding-top: 4rem;
+  display: none;
+  width: 50%;
+  z-index: 99;
+}
+
+.nav-menu-list {
+  list-style: none;
+  padding: 0 2rem;
+}
+
+.nav-menu-list li {
+  padding: .625rem 0;
+  width: 100%;
+}
+
+.nav-menu-list a {
+  color: #fff;
+  font-size: 4rem;
+  text-decoration: none;
+}
+
+.show-menu {
+  display: block;
+}
+
+@media only screen and (max-width: 47.9375em) and (orientation:landscape) {
+  .nav-menu-container {
+    height: 80vh;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .toggle-icon {
+    display: none;
+  }
+
+  .nav-menu-container {
+    background-color: transparent;
+    display: block;
+    height: 4rem;
+    margin: 0;
+    padding: 0;
+    z-index: 99999;
+  }
+
+  .nav-menu-list li {
+    display: inline;
+    padding: 0.9rem;
+  }
+
+  .nav-menu-list a {
+    color: #000;
+    font-size: large;
+  }
+
+  .nav-menu-list a:hover {
+    text-decoration: underline;
+  }
+}
