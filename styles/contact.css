@@ -1,0 +1,407 @@
+/* Tap target size recommmended by the Android UI guidelines - 48 CSS pixels  */
+
+/* ==============================================
+   DEFAULT STYLE
+   ============================ */
+
+html {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    /* Make font-size of other elements 
+     * multiple of 10 instead of 16 (16px) 
+    */
+    font-size: 62.5%;
+    /* define line-height: */
+}
+
+body {
+    /* 100% of html's width */
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+}
+h1 {
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+h4 {
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+}
+/* FLEXBOX-FIX */
+.flexbox-fix {
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    /* TWEENER - IE 10 */
+    display: -ms-flexbox;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: -webkit-flex;
+    display: flex;
+}
+/* ==============================================
+  HEADER SECTION
+  ============================ */
+header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.fixed_menu {
+    /* Need position: absolute to set z-index */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* need to place menu on top of
+     * the .contact-heading div
+     */
+    z-index: 1;
+    background-color: #fff;
+    
+}
+
+.heading-wrap {
+    display: none;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading wrapper media queries */
+
+/* medium sized screens - 768px - 1023px */
+
+@media screen and (min-width: 48em) and (max-width: 64em) {
+    .heading-wrap {
+        position: relative;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../images/stockholm-lg-screens.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+       
+    }
+    .heading-wrap h1 {
+        position: absolute; 
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 35%;
+        margin: 0;
+        padding: 0;
+        font-size: 6rem;
+        font-weight: 500;
+    }
+}
+
+/* large screens - 1024px to 1904px */
+@media screen and (min-width: 64em) and (max-width: 120em) {
+    .heading-wrap {
+        position: relative;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../images/stockholm-lg-screens.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+     .heading-wrap h1 {
+        position: absolute;
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 40%;
+        margin: 0;
+        padding: 0;
+        font-size: 7.2rem;
+        font-weight: 600;
+    }
+}
+/* xlarge screens - greater than 1920px*/
+@media screen and (min-width: 120em){
+    .heading-wrap {
+        position: relative;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../images/stockholm-xlg-screens.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .heading-wrap h1{
+        position: absolute;
+        width: auto;
+        height: auto;
+        top: 40%;
+        left: 40%;
+        margin: auto;
+        padding: 0;
+        font-size: 10rem;
+        font-weight: 900;
+    }
+}
+
+/* ==============================================
+   MAIN SECTION
+   ============================ */
+main {
+    /* 96% of body's width 
+     * minus 4% right and left margins together */
+    width: 96%;
+    height: auto;
+    margin: 0 2% 0 2%;
+    padding: 0;
+}
+
+/* xlarge screens - greater than 1920px*/
+
+@media screen and (min-width: 120em) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 2% auto 2% auto;
+    }
+}
+
+/* CONTACT FORM
+   ============================================================= */
+.contact_box {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    /* needs to update to container elements' margin */
+    margin: 0;
+    
+}
+    
+#contact_form {
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+.full_name, 
+.other_contact_info {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0 0 0;
+}
+
+.full_name input, 
+.other_contact_info input {
+    width: 100%;
+    /* 44px - tap target sized recommended - 
+     * 44 (iOS) 48(Android) CSS px recommended */
+    line-height: 4.2rem;
+    padding: 0;
+    margin: 0;
+    border: 0.1rem solid lightgray;
+}
+
+label {
+    font-size: 1.6rem;
+    margin: 1rem 0 0.3rem 0;
+}
+
+textarea {
+    /* 100% of .contact_box section element */
+    width: 100%;
+    /* 30% of viewport's width */
+    height: 25vw;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    border: 0.1rem solid lightgray;
+}
+.ctc {
+    position: relative;
+    width: 5rem;
+    height: 2.5rem;
+    margin: 1rem auto 1rem auto;
+    padding: 0;
+    background-color: #f12241;
+    border: none;
+    color: #fff;
+    font-weight: 100;
+   
+}
+
+/* medium sized screens - 768px - 1023px */
+
+@media screen and (min-width: 48em) and (max-width: 64em) {
+    /* Reduce the size of the input field
+     * in tablets in portrait orientation
+     * and medium-sized screen devices 
+     */
+    .full_name input, 
+    .other_contact_info input {
+        width: 70%;
+        /* 44px height - 44 (iOS) 48(Android) CSS px recommended */
+        line-height: 4.2rem;
+        padding: 0;
+        margin: 0;
+        border: 0.1rem solid lightgray;
+    }
+}
+
+/* large screens - 1024px to 1904px */
+
+@media screen and (min-width: 64em) and (max-width: 120em) {
+    .contact_box {
+        width: 60%;
+        height: 100%;
+        padding: 0 20% 0 20%;
+        margin: auto;
+    }
+    .contact_box h3 {
+        margin-top: 1rem;
+    }
+    #contact_form {
+        width: 100%;
+        height: auto;
+    }
+    .full_name, 
+    .other_contact_info {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 0;
+    }
+    .full_name input, 
+    .other_contact_info input {
+        width: 80%;
+        line-height: 3rem;
+        margin: 0;
+        padding: 0;
+        border: 0.1rem solid lightgray;
+    }
+}
+ /* xlarge screens - greater than 1920px*/
+
+@media screen and (min-width: 120em) {
+    .contact_box {
+        width: 40%;
+        height: 100%;
+        padding: 0 0 0 5%;
+        margin: auto;
+    }
+    .contact_box h3 {
+        margin-top: 0;
+    }
+    #contact_form {
+        width: 100%;
+        height: auto;
+    }
+    .full_name, 
+    .other_contact_info {
+        width: 100%;
+        height: auto;
+        margin: auto;
+        padding: 0;
+    }
+    .full_name input, 
+    .other_contact_info input {
+        width: 40%;
+        line-height: 3rem;
+        margin: 0;
+        padding: 0;
+        border: 0.1rem solid lightgray;
+    }
+    label {
+        width: auto;
+        height: auto;
+        /* 0.5 bottom margin */
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+    }
+    textarea {
+        width: 100%;
+        height: 10vw;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* MAP SECTION
+   ============================================================= */
+.map {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.map figure {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.map figure img {
+    width: 100%;
+    height: auto;
+}
+
+/* xlarge screens - greater than 1920px*/
+
+@media screen and (min-width: 120em) {
+    .map {
+        width: 50%;
+        height: 100%;
+        margin: 0 auto 0 auto;
+        padding: 0;
+    }
+    
+    .map h3 {
+        margin-top: 0;
+    }
+    .map figure {
+        width: 85%;
+        height: 100%;
+    }
+    .map figure img {
+        width: 100%;
+        height: auto;
+        margin: auto;
+    }
+}
+
