@@ -2,18 +2,21 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width">
+        <!-- Adding intial-scale=1 allows for a 1:1 relationship  between CSS pixels and device independt pixels regardless of orientation. If that attribute value is missing, some devices will zoom the page when in landscape orientation instead of taking full advantage of a larger width  -->
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <!-- Disable auto-detect telephone numbers on iOS and Android to avoid random number to become tapable  -->
+        <meta name="format-detection" content="telephone=no" />
         <title>Pixel Stories</title>
         <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/contact.css">
+        <link rel="stylesheet" href="styles/footer.css">
         <!-- <script src="nav_menu.js"></script> -->
-        <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
         <!-- NAVIGATION MENU -->
         <header>
             <div class="fixed_menu">
-                <a href="index.html"><img alt="logo" src="images/logo1.png" class="logo"></a>
+                <a href="index.html"><img alt="Pixel Stories" src="images/logo1.png" class="logo"></a>
                 <nav>
                     <ul class="nav-menu">
                         <li><a href="index.html" title="Home">Home</a></li>
@@ -23,48 +26,72 @@
                     </ul>
                 </nav>
             </div>
+            <div class="heading-wrap">
+                <h1>Contact Us</h1>
+            </div>
         </header>
         <main>
             <!-- CONTACT FORM SECTION -->
-            <section class="contact_box">
-                <h3>Tell us about your brand story</h3>
-                <form id="contact_form">
+            <section class="contact_box flexbox-fix">
+                <h3>Tell us about your project</h3>
+                <!-- id to link textarea and button to form -->
+                <form id="contact_form flexbox-fix">
                     <!-- Elements grouped in <div> for styling -->
-                    <div class="full_name">
-                        First Name:
+                    <div class="full_name flexbox-fix">
+                        <label for="First Name">First Name:</label>
                         <input type="text" name="firstName">
-                        Last Name:
+                        <label for="Surname">Surname:</label>
                         <input type="text" name="lastName">
                     </div>
-                    <div class="other_contact_info">
-                        Email:
+                    <div class="other_contact_info flexbox-fix">
+                        <label for="email">Email:</label>
                         <input type="text" name="email">
-                        Telephone:
+                        <label for="Telephone">Telephone:</label>
                         <input type="text" name="telephone">
                     </div>
                 </form>
-                <!-- textarea and button element have form attribute to "link" them to the form above -->
+                <!-- label, textarea and button element have form attribute to "link" them to the form above -->
+                <label form="contact_form">Message:</label>
                 <textarea name="message" form="contact_form">
                 </textarea>
-                <button type="submit" form="contact_form" value="submit">Send</button>
+                <button class="all-buttons ctc" type="submit" form="contact_form" value="submit">Send</button>
             </section>
             <!-- LOCATION MAP SECTION -->
-            <section class="map">
+            <!-- IE does not support srcset.
+           Use conditional statements to 
+           choose a different stylesheet
+           which hides the <img> element with
+           the smallest image and displays only the one with the appropriate images -->
+            <section class="map flexbox-fix">
                 <!-- <section> element requires a heading element -->
                 <h3>Find us</h3>
                 <figure>
-                    <img src="m_map.png" alt="map">
+                    <img src="images/map-sm.png" srcset="images/map-m.png 809w, images/map-lg.png 1366w" alt="location map">
                 </figure>
             </section> 
         </main>
         <!-- FOOTER -->
-      <footer>
-          <p>Pixel Stories</p>
-          <p>Tomtebodavägen 3A</p>
-          <p>171 65, Solna</p>
-          <p>08-466 60 00</p>
-          <p>pixelstories.se</p>
-      </footer>
+        <footer class="flexbox-fix">
+            <div class="footer_header">
+                <a href="index.html" rel="home"><img src="images/logo@0,1x.png" srcset="images/logo-lg.png 199w"  alt="Pixel Stories"></a>
+            </div>
+            <!-- FOOTER ADDRESS -->
+            <div class="address_contact">
+                Tomtebodavägen 3A<br>
+                171 65, Solna<br>
+                <a href=”tel:+46730000000”> 073 000 00 00</a><br>
+                pixelstories.se
+            </div>    
+            <!-- FOOTER SOCIAL -->
+            <nav class="social">
+                <ul class="flexbox-fix">
+                    <li><a href="https://sv-se.facebook.com/"><img src="images/facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a></li>
+                    <li><a href="https://twitter.com/?lang=sv"><img src="images/twitter.png" alt="twitter"></a></li>
+                    <li><a href="https://se.linkedin.com/"><img src="images/linkedIn.png" alt="linkedIn"></a></li>  
+                </ul>  
+            </nav>    
+        </footer>
     </body>
 </html>
 
