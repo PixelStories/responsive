@@ -80,7 +80,7 @@ main {
 /* -------  ABOUT.HTML ------- */
 
 /* BACKGROUND */
-header, .fixed-menu, .logo{
+header, .fixed-menu{
     width: 100%;
 }
 
@@ -155,7 +155,7 @@ header, .fixed-menu, .logo{
 .img_member {
     position: relative;
     right: 11rem;
-    bottom: 5rem;
+    bottom: 0;
 }
 
 .caption_a {
@@ -180,7 +180,7 @@ header, .fixed-menu, .logo{
     display: none;
 }
 
-@media screen and (min-width: 35em){ /* 560px */
+@media screen and (min-width: 36.25em){ /* 580px */
     .member-list {
         width: 100%;
         -webkit-box-orient: horizontal;
@@ -196,7 +196,6 @@ header, .fixed-menu, .logo{
         height: auto;
         display: flex;
         margin: 0 0.1rem;
-        
     }
     
     .figure_a {
@@ -221,16 +220,32 @@ header, .fixed-menu, .logo{
         width: 100%;
         position: relative;
         left: 0;
-        bottom: 8rem;
-    }
-    
-    .transition05:hover {
-        bottom: 20rem;
-        
+        bottom: 2rem;
     }
     
      .caption_a > p {
-        padding: 4rem 0 1rem 2rem;
+        padding: 3rem 0 1rem 2rem;
+    }
+    
+}
+
+@media screen and (min-width: 44.5em){/* 712px */
+   
+    .caption_a{
+        bottom: 3rem;
+    }
+    
+     .caption_a > p {
+        padding-top: 0.2rem;
+    }
+    
+    
+}
+
+@media screen and (min-width: 59em){
+     
+   .transition05:hover {
+        bottom: 18rem;
     }
     
     .skills {
@@ -238,18 +253,11 @@ header, .fixed-menu, .logo{
         font-size: 1.2rem;
     }
     
-    .text-skills {
-        margin-left: 2rem;
-        color: white;
-    }
-    
     .icon {
         color: #f12241;
-        margin: 2rem 0 2rem 1rem;
+        margin: 2rem 0 2rem 0.5rem;
         background-color: white;
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.8rem;
         border-radius: 0.3rem;
-        position: relative;
-        left: -6rem;
     }
 }
