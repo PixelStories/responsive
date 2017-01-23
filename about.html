@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Pixel Stories</title>
+    <link rel="shortcut icon" href="images/favicon16.png" type="image/png">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/nav_menu.css"><!--header css-->
+    <link rel="stylesheet" href="styles/footer.css"><!--footer css-->
+    <link rel="stylesheet" href="styles/about.css"><!--about page css-->
+    <script src="js/hamburger-menu.js"></script>
+</head>
+
+<body>
+  <!-- NAVIGATION MENU -->
+  <header>
+    <div class="fixed-menu">
+      <div class="logo">
+        <a href="index.html">
+          <img srcset="images/logo@0,1x.png 320w, 
+                       images/logo@0,25x.png 640w,
+                       images/logo@0,5x.png 1240w"
+               sizes="50vw"
+               src="images/logo@0,1x.png"
+               alt="logo pixelstories">
+        </a>
+      </div>
+      <a href="#" id="hamburg-menu" class="nav-menu-icon" onclick="toggleMenu()"></a>
+      <a href="#" id="close-hamburg-menu" class="nav-close-menu-icon" onclick="toggleMenu()"></a>
+      <nav id="toggle-menu" class="nav-menu-links">
+        <ul class="nav-menu">
+          <li><a href="index.html" title="Home">Home</a></li>
+          <li><a href="projects.html" title="Projects">Projects</a></li>
+          <li><a href="about.html" title="About us">About us</a></li>
+          <li><a href="contact.html" title="Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+        <main>
+            <!-- ABOUT US SECTION -->
+            <section class="container large">
+                <div class="opacity">
+                    <h1>About us</h1>
+                    <article>
+                            <h2>Why us?</h2>
+                            <p>We love a great story! We understand how compelling a well-structured narrative can be. With that in mind, we develop visually powerful designs that create lasting impressions and engage your customers with your brand story. We want the web to be involving and fun for all.</p>
+                    </article>
+                    <article>
+                            <h2>What we do</h2>
+                        <p><strong>Great design + content</strong></p>
+                        <p>We combine the latest web technologies together with content - your brand story step-by-step - to create an impressive, responsive, and effective design that will motivate and inspire users.</p>
+                    </article>
+                    <article>
+                            <h2>How we work</h2>
+                            <p>We have a professional team with skills ranging from UX/UI designing, photographing, web development, Search Engine Optimisation, and branding.<br><br>
+                            We believe the key to success to any project is close work collaboration; therefore, we like to engage our customers in every stage of development of the project.</p>
+                    </article>
+                </div>
+            </section>
+            <!-- THE TEAM SECTION -->
+            <section>
+                <header class="bg-team-title"><!--To set a background image / height / Width -->
+                    <h2 class="h2_a">The Team</h2>
+                </header>
+                <div class="member-list flex flex-d-col justify-cont-btw">
+                    <div  class="container member">
+                        <figure class="figure_a">
+                            <img class="img_member" src="images/yoko.jpg" alt="Yoko"><!--photo size: 500px x 500px-->
+                            <figcaption class="caption_a transition05">
+                                <p>
+                                    Yoko<br>
+                                    Front-end developer<br><br>
+                                    yoko@email.com<br>
+                                    073 XXX XX XX<br>
+                                </p>
+                                <div class="skills">
+                                    <div class="text-skills">My skills:</div>
+                                    <div class="icon">HTML</div>
+                                    <div class="icon">CSS</div>
+                                    <div class="icon">JavaScript</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="container member marginside">
+                        <figure  class="figure_a">
+                            <img class="img_member" src="images/janaina.jpg" alt="Janaina">
+                            <figcaption class="caption_a transition05">
+                                <p>
+                                    Janaina<br>
+                                    Front-end developer<br><br>
+                                    janaina@email.com<br>
+                                    072 XXX XX XX<br>
+                                </p>
+                                <div class="skills">
+                                    <div class="text-skills">My skills:</div>
+                                    <div class="icon">HTML</div>
+                                    <div class="icon">CSS</div>
+                                    <div class="icon">JavaScript</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="container member">
+                        <figure class="figure_a">
+                            <img class="img_member" src="images/svetlana.jpg" alt="Svetlana">
+                            <figcaption class="caption_a transition05">
+                                <p>
+                                    Svetlana<br>
+                                    Front-end developer<br><br>
+                                    svetlanda@email.com<br>
+                                    072 XXX XX XX<br>
+                                </p>
+                                <div class="skills">
+                                    <div class="text-skills">My skills:</div>
+                                    <div class="icon">HTML</div>
+                                    <div class="icon">CSS</div>
+                                    <div class="icon">JavaScript</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+          <p>Pixel Stories</p>
+          <p>Tomtebodavägen 3A</p>
+          <p>171 65, Solna</p>
+          <p>08-466 60 00</p>
+          <p>pixelstories.se</p>
+      </footer>
+    </body>
+</html>
