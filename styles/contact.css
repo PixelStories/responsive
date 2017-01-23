@@ -22,7 +22,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Helvetica Neue", Arial;
 }
 h1 {
     font-weight: 600;
@@ -49,127 +49,94 @@ p {
     margin: 0;
     padding: 0;
 }
-/* FLEXBOX-FIX */
-.flexbox-fix {
-    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-    /* TWEENER - IE 10 */
-    display: -ms-flexbox;
-    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-    display: -webkit-flex;
-    display: flex;
-}
+
 /* ==============================================
   HEADER SECTION
   ============================ */
-header {
+/*header {
     position: relative;
     width: 100%;
     height: auto;
     padding: 0;
     margin: 0;
-}
+}*/
+/*
 .fixed_menu {
-    /* Need position: absolute to set z-index */
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 0;
     left: 0;
-    /* need to place menu on top of
-     * the .contact-heading div
-     */
-    z-index: 1;
-    background-color: #fff;
-    
+    background-color: #fff; 
+}*/
+
+.page-title {
+    display: block;
+    width: 96%;
+    height: 10vh;
+    /*background-color: #f12241;*/
+    margin: 0 2% 0 2%;
 }
 
 .heading-wrap {
-    display: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
+.heading-wrap h1 {
+    display: block;
+}
+
 /* Heading wrapper media queries */
 
-/* medium sized screens - 768px - 1023px */
+/* medium sized screens to xlarge */
 
-@media screen and (min-width: 48em) and (max-width: 64em) {
-    .heading-wrap {
+@media screen and (min-width: 48em) {
+    /*.fixed_menu {
+        position: absolute;
+        z-index: 1;
+    }*/
+    
+    .page-title {
         position: relative;
         display: block;
         width: 100vw;
         height: 100vh;
+        margin: 0;
         background-image: url(../images/stockholm-lg-screens.jpg);
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-       
     }
+    
+    .heading-wrap {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    
     .heading-wrap h1 {
-        position: absolute; 
-        width: auto;
-        height: auto;
-        top: 50%;
-        left: 35%;
+        text-align: center;align-self: center;
         margin: 0;
-        padding: 0;
-        font-size: 6rem;
-        font-weight: 500;
+        font-size: 3rem;
     }
 }
 
-/* large screens - 1024px to 1904px */
-@media screen and (min-width: 64em) and (max-width: 120em) {
-    .heading-wrap {
-        position: relative;
-        display: block;
-        width: 100vw;
-        height: 100vh;
-        background-image: url(../images/stockholm-lg-screens.jpg);
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-     .heading-wrap h1 {
-        position: absolute;
-        width: auto;
-        height: auto;
-        top: 50%;
-        left: 40%;
-        margin: 0;
-        padding: 0;
-        font-size: 7.2rem;
-        font-weight: 600;
+@media screen and (min-width: 120em) {
+    .heading-wrap h1 {
+        font-size: 4rem;
     }
 }
-/* xlarge screens - greater than 1920px*/
-@media screen and (min-width: 120em){
-    .heading-wrap {
-        position: relative;
-        display: block;
-        width: 100vw;
-        height: 100vh;
-        background-image: url(../images/stockholm-xlg-screens.jpg);
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-    .heading-wrap h1{
-        position: absolute;
-        width: auto;
-        height: auto;
-        top: 40%;
-        left: 40%;
-        margin: auto;
-        padding: 0;
-        font-size: 10rem;
-        font-weight: 900;
-    }
-}
+
 
 /* ==============================================
    MAIN SECTION
@@ -190,7 +157,6 @@ main {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: flex-start;
         margin: 2% auto 2% auto;
     }
 }
@@ -199,45 +165,68 @@ main {
    ============================================================= */
 .contact_box {
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     height: auto;
     /* needs to update to container elements' margin */
-    margin: 0;
-    
+    margin: auto;
 }
-    
+
+.contact_box h2 {
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+}
+/* add 20% margin to the contact section in large screens */
+
+
 #contact_form {
     flex-direction: column; 
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
     height: auto;
     margin: 0;
 }
 
-.full_name, 
-.other_contact_info {
-    flex-direction: column;
-    justify-content: center;
+.full-name {
     width: 100%;
-    height: auto;
-    margin: 1rem 0 0 0;
 }
 
-.full_name input, 
-.other_contact_info input {
+.form-field1, .form-field2, .form-field3{
     width: 100%;
-    /* 44px - tap target sized recommended - 
-     * 44 (iOS) 48(Android) CSS px recommended */
-    line-height: 4.2rem;
-    padding: 0;
-    margin: 0;
+    font-size: 1.6rem;
+}
+
+.form-field-title {
+    width: 100%;
+    font-size: 1.6rem;
+}
+.form-field-input {
+    /* inline-flex so last name input field
+     * won't move under first name with screen resizing */
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 100%;
+    line-height: 4rem;
     border: 0.1rem solid lightgray;
 }
 
+.left {
+    margin-right: 0.5rem;  
+}
+
+.left, .right {
+    width: 48%; 
+    padding-left: 0.5rem;
+}
+
 label {
+    width: 100%;
     font-size: 1.6rem;
-    margin: 1rem 0 0.3rem 0;
+    margin: 1rem 0 0 0;
 }
 
 textarea {
@@ -245,163 +234,196 @@ textarea {
     width: 100%;
     /* 30% of viewport's width */
     height: 25vw;
-    margin: 0 0 1rem 0;
+    margin: 0.5rem 0 1rem 0;
     padding: 0;
     border: 0.1rem solid lightgray;
 }
+
+.button-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+    padding: 0;
+}
 .ctc {
     position: relative;
-    width: 5rem;
-    height: 2.5rem;
-    margin: 1rem auto 1rem auto;
+    /* start - properties to be removed from this class */
+    /*
+    width: 10rem;
+    height: 3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    */
+    /* end */
     padding: 0;
     background-color: #f12241;
     border: none;
     color: #fff;
-    font-weight: 100;
-   
+    font-weight: 100; 
 }
 
-/* medium sized screens - 768px - 1023px */
-
-@media screen and (min-width: 48em) and (max-width: 64em) {
-    /* Reduce the size of the input field
-     * in tablets in portrait orientation
-     * and medium-sized screen devices 
-     */
-    .full_name input, 
-    .other_contact_info input {
-        width: 70%;
-        /* 44px height - 44 (iOS) 48(Android) CSS px recommended */
-        line-height: 4.2rem;
-        padding: 0;
-        margin: 0;
-        border: 0.1rem solid lightgray;
-    }
+.client-support {
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+    
 }
 
-/* large screens - 1024px to 1904px */
+.client-support p {
+    font-style: italic;
+}
+
+.contact-support a {
+    text-decoration: none;
+    color: #f12241;
+    /* no line break on whitespaces */
+    white-space: nowrap;
+}
+.contact-support {
+    color: #f12241; 
+}
+
+/* contact form section width set to 60% for medium sized screens */
 
 @media screen and (min-width: 64em) and (max-width: 120em) {
     .contact_box {
         width: 60%;
-        height: 100%;
+        height: auto;
+        margin: auto;
         padding: 0 20% 0 20%;
-        margin: auto;
     }
-    .contact_box h3 {
-        margin-top: 1rem;
-    }
-    #contact_form {
-        width: 100%;
-        height: auto;
-    }
-    .full_name, 
-    .other_contact_info {
-        width: 100%;
-        height: auto;
-        margin: auto;
-        padding: 0;
-    }
-    .full_name input, 
-    .other_contact_info input {
-        width: 80%;
-        line-height: 3rem;
-        margin: 0;
-        padding: 0;
-        border: 0.1rem solid lightgray;
+    .client-support p {
+        font-size: 2rem;
     }
 }
- /* xlarge screens - greater than 1920px*/
+
+/* contact_box section width set to 45% in xlarge screens */
 
 @media screen and (min-width: 120em) {
     .contact_box {
-        width: 40%;
-        height: 100%;
-        padding: 0 0 0 5%;
-        margin: auto;
+        justify-content: flex-start;
+        width: 45%;
+        height: 40vw;
+        margin: 5rem 0 0 0;
+        padding: 0;
     }
-    .contact_box h3 {
-        margin-top: 0;
-    }
-    #contact_form {
+     .contact_box h2 {
         width: 100%;
-        height: auto;
+        margin: 0 0 2rem 0;
     }
-    .full_name, 
-    .other_contact_info {
-        width: 100%;
-        height: auto;
-        margin: auto;
-        padding: 0;
-    }
-    .full_name input, 
-    .other_contact_info input {
-        width: 40%;
-        line-height: 3rem;
-        margin: 0;
-        padding: 0;
-        border: 0.1rem solid lightgray;
-    }
-    label {
-        width: auto;
-        height: auto;
-        /* 0.5 bottom margin */
-        margin: 0 0 0.5rem 0;
-        padding: 0;
-    }
-    textarea {
-        width: 100%;
-        height: 10vw;
-        margin: 0;
-        padding: 0;
+    .client-support p {
+        font-size: 2rem;
     }
 }
+/* Form  and textarea styling for medium to xlarge devices */
+
+@media screen and (min-width: 48em) {
+    .full-name {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .contact-email {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .contact-telephone {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .form-field1, .form-field2, .form-field3 {
+        width: 35%;
+    }
+    
+    .left {
+        margin-right: 1rem;
+    }
+    
+      textarea {
+        height: 10vw;
+    }
+}
+
 
 /* MAP SECTION
    ============================================================= */
 .map {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: auto;
+    height: 96vw;
     margin: 0;
     padding: 0;
 }
-
-.map figure {
+.location-map {
+    background-image: url(../images/map-sm-sq.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
+    height: 96vw;
 }
-
-.map figure img {
-    width: 100%;
-    height: auto;
+/* map for retina display 
+ * reduced height so it would not collapse with footer
+ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+    .location-map {
+        background-image: url(../images/map-sm-sq.png);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+        height: 80vw;
+ }
 }
+/* large screens - 1024px to 1904px */
 
+@media screen and (min-width: 64em) and (max-width: 120em) {
+    .map {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    .location-map {
+        background-image: url(../images/map-m-rect@2x.png);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width: 100%;
+    }
+}
 /* xlarge screens - greater than 1920px*/
 
 @media screen and (min-width: 120em) {
     .map {
-        width: 50%;
-        height: 100%;
-        margin: 0 auto 0 auto;
+        width: 45%;
+        height: 40vw;
+        margin: 5rem 0 0 0;
         padding: 0;
     }
     
-    .map h3 {
-        margin-top: 0;
+    .map h2 {
+        margin: 0 0 2rem 0;
     }
-    .map figure {
-        width: 85%;
-        height: 100%;
-    }
-    .map figure img {
-        width: 100%;
-        height: auto;
-        margin: auto;
+    
+    .location-map {
+        background-image: url(../images/map-lg-sq.png);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover; 
     }
 }
-
