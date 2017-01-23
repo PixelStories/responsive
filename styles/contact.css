@@ -71,16 +71,17 @@ p {
 
 .page-title {
     display: block;
-    width: 96%;
-    height: 10vh;
+    width: 100%;
+    height: 15vh;
     /*background-color: #f12241;*/
-    margin: 0 2% 0 2%;
+    margin: 0;
 }
 
 .heading-wrap {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items:flex-end;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -89,6 +90,8 @@ p {
 
 .heading-wrap h1 {
     display: block;
+    width: 100%;
+    height: 35%;
 }
 
 /* Heading wrapper media queries */
