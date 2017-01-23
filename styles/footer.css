@@ -1,4 +1,3 @@
-/* NOT READY - had to change layout */
 html {
     width: 100vw;
     height: auto;
@@ -17,7 +16,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: "Open Sans";
+    font-family: "Open Sans", "Helvetica Neue", Arial;
 }
 
 /* ==============================================
@@ -25,15 +24,16 @@ body {
    ============================ */
 
 footer {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     /* 100% of the viewport's width */
     width: 100vw;
     height: auto;
-    margin: 2rem 0 0 0;
+    margin: 4% 0 0 0;
     /* top space between footer and main */
-    padding: 2rem 0 0 0;
+    padding: 2% 0 0 0;
     border-top: solid 0.1rem;
     border-color: lightgray;
 }
@@ -62,6 +62,7 @@ footer {
     height: auto;
     left: 40%;
 }
+
 /* FOTTER ADDRESS AND CONTACT
    ============================================================= */
 .address_contact {
@@ -73,36 +74,41 @@ footer {
 /* FOOTER SOCIAL
    ============================================================= */
 
-footer nav {
+.social {
     position: relative;
     /* same width as body's width */
     width: 100%;
     /* 13% of VIEWPORT'S WIDTH */
-    height: 13vw; 
+    height: 13vh; 
     margin: 1rem 0 1rem 0;
        
 }
 
 .social ul {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.social-wrap {
+    display: flex;
     flex-direction: row;
     justify-content: center;
     list-style-type: none;
-    /* same width as footer nav */
     width: 100%;
-    /* 13% of VIEWPORT'S WIDTH */
-    height: 13vw;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 .social li {
     /* so we can move the child's position */
     position: relative;
-    /* 12% of parent's width -  
-     * 49px CSS - min recommended
-     * tap target size 44 -48px CSS*/
-    width: 12%;
-    /* 12% of VIEWPORT WIDTH */
-    height: 12vw;
+    /* 5 rem - 50px css for tap target size - min recommended
+     * tap target size 44 -48px CSS
+     */
+    width: 5rem;
+    height: 5rem;
     margin: 0.3rem;
     padding: 0;
 }
@@ -110,10 +116,9 @@ footer nav {
 .social a {
     /* relative to its parent's position */
     position: absolute;
-    /* same width as <li> element */
-    width: 100%;
-    /* 12% of VIEWPORT WIDTH */
-    height: 12vw;
+    /* 5 rem - 50px css for tap target size */
+    width: 5rem;
+    height: 5rem;
     /* placed at the beginning of <nav> (parent element) */
     top: 0;
     margin: 0;
@@ -122,89 +127,110 @@ footer nav {
 }
 .social img{
     position:relative;
-    /* same width as <a> element */
-    width: 100%;
-    /* 12% of VIEWPORT WIDTH */
-    height: 12vw;
+    /* 5 rem - 50px css for tap target size */
+    width: 5rem;
+    height: 100%;
 }
+    
+/* media queries */
 
-/* large screen - 1024px */
-
-/* Footer for devices with screen width
- * up to 1024px should have the same layour.
- * The layout will change for large screens */
+/* footer header */
 
 @media screen and (min-width: 64em) {
     footer {
+        display: flex;
         flex-direction: row;
-        justify-content: center;
-        position: relative;
-        margin: 1rem 0 0 0;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 15vh;
+        margin-bottom: 2%;
     }
     
-    /* Footer Header */
-    .footer_header { 
-        /* Need set position to relative
-         * so we <a> can be placed
-         * correctly
-         */
-        position: relative;
-        width: 40%;
-        margin: 0;
-        padding: 0;
+    .footer_header {
+        margin: 0 0 0 2%;
+        height: 100%;  
     }
     
     .footer_header a {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    .footer_header img {
+        /* position property choice 
+         * affects the width of the element 
+         */
         position: absolute;
+        width: 30%;
+        height: auto;
+        left: 0;
+    }
+
+/* FOTTER ADDRESS AND CONTACT
+   ============================================================= */
+    .address_contact {
+        margin: 0;
+        height: 100%;
+        font-size: 1.6rem;
+    }
+    
+/* FOOTER - SOCIAL
+   ============================================================= */
+    .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+        margin: 0 2% 0 0;
+    }
+    
+    .social ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
         width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
     }
     
-    .footer_header img {
+    .social-wrap {
         position: relative;
-        width: 40%;
-        height: auto;
-        margin: 3rem 0 0;
-        padding: 0;
-        left: 10%;
-    }
-    /* Contact Address */
-    .address_contact {
-        width: 20%;
-        margin: 3rem 0 0 0;
-        padding: 0;
-        font-size: 1.6rem;
-    }
-    
-    /* Social Navigation */
-    footer nav {
-        position: relative;
-        width: 40%;
-        margin: 3rem 0 0 0;
-        padding: 0;
-    }
-    
-    .social ul {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 50%;
+        height: 50%;
         margin: 0;
     }
     
     .social li {
-        width: 20%;
+        position: relative;
+        width: 5rem;
         height: auto;
-        margin: 0 1rem 0 0;
-        padding: 0;
+        margin: 0 0 0 1rem;
+        right: 0;
     }
     
-    .social a img {
+    .social a {
+        /* position set to absolute
+         * in order to set the width 
+         *  height to 100% of its parent element
+         */
+        position: absolute;
         width: 100%;
         height: auto;
-        margin: 0;
-        padding: 0
+        right: 0;
+        
+    }
+    
+    .social img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        right: 0;
     }
 }
 

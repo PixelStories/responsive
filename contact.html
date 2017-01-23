@@ -15,46 +15,70 @@
     <body>
         <!-- NAVIGATION MENU -->
         <header>
-            <div class="fixed_menu">
-                <a href="index.html"><img alt="Pixel Stories" src="images/logo1.png" class="logo"></a>
-                <nav>
-                    <ul class="nav-menu">
-                        <li><a href="index.html" title="Home">Home</a></li>
-                        <li><a href="projects.html" title="Projects">Projects</a></li>
-                        <li><a href="about.html" title="About  us">About us</a></li>
-                        <li><a href="contact.html" title="Contact">Contact</a></li>
-                    </ul>
-                </nav>
+            <div class="fixed-menu">
+                <div class="logo-container">
+                    <a href="index.html"><img class="logo" src="images/logo@0,1x.png" alt="logo pixelstories"></a>
+                </div>
+                <div class="toggle-icon">
+                    <img id="hamburg-menu" class="nav-menu-icon" src="images/hamburg-menu.png" alt="hamburg-menu" onclick="toggleMenu()">
+                    <img id="close-hamburg-menu" class="nav-close-menu-icon" src="images/close-hamburg-menu.png" alt="close-hamburg-menu" onclick="toggleMenu()">
+                </div>
             </div>
-            <div class="heading-wrap">
-                <h1>Contact Us</h1>
+            <nav id="toggle-menu" class="nav-menu-container">
+                <ul class="nav-menu-list">
+                    <li><a href="index.html" title="Home">Home</a></li>
+                    <li><a href="projects.html" title="Projects">Projects</a></li>
+                    <li><a href="about.html" title="About us">About us</a></li>
+                    <li><a href="contact.html" title="Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="page-title">
+                <div class="heading-wrap">
+                    <h1>Contact Us</h1>
+                </div>
             </div>
         </header>
         <main>
             <!-- CONTACT FORM SECTION -->
             <section class="contact_box flexbox-fix">
-                <h3>Tell us about your project</h3>
+                <h2>Tell us about your project</h2>
                 <!-- id to link textarea and button to form -->
                 <form id="contact_form flexbox-fix">
-                    <!-- Elements grouped in <div> for styling -->
-                    <div class="full_name flexbox-fix">
-                        <label for="First Name">First Name:</label>
-                        <input type="text" name="firstName">
-                        <label for="Surname">Surname:</label>
-                        <input type="text" name="lastName">
+                    <div class="full-name">
+                        <div class="form-field1">
+                            <div class="form-field-title">Name:</div>
+                        </div>
+                        <div class="form-field-input">
+                            <input type="text" class="left" placeholder="First name">
+                            <input type="text" class="right" placeholder="Last name">
+                        </div>
                     </div>
-                    <div class="other_contact_info flexbox-fix">
-                        <label for="email">Email:</label>
-                        <input type="text" name="email">
-                        <label for="Telephone">Telephone:</label>
-                        <input type="text" name="telephone">
+                    <div class="contact-email">
+                        <div class="form-field2">
+                            <div class="form-field-title">Email:</div>
+                        </div>
+                        <div class="form-field-input">
+                            <input type="text" name="email">
+                        </div>
+                    </div>
+                    <div class="contact-telephone">
+                        <div class="form-field3">
+                            <div class="form-field-title">Telephone:</div>
+                        </div>
+                        <div class="form-field-input">
+                            <input type="text" name="telefone">
+                        </div>
                     </div>
                 </form>
                 <!-- label, textarea and button element have form attribute to "link" them to the form above -->
                 <label form="contact_form">Message:</label>
-                <textarea name="message" form="contact_form">
-                </textarea>
-                <button class="all-buttons ctc" type="submit" form="contact_form" value="submit">Send</button>
+                <textarea name="message" form="contact_form"></textarea>
+                <div class="button-wrap">
+                    <button class="all-buttons ctc" type="submit" form="contact_form" value="submit">Send</button>
+                </div>
+                <div class="client-support">
+                    <p>For client support services, please email us at <span class="contact-support">support@pixelstories.se</span> or call us on <span class="contact-support"><a href=”tel:+46730001111”>073 000 11 11.</a></span></p>
+                </div>
             </section>
             <!-- LOCATION MAP SECTION -->
             <!-- IE does not support srcset.
@@ -62,16 +86,15 @@
            choose a different stylesheet
            which hides the <img> element with
            the smallest image and displays only the one with the appropriate images -->
-            <section class="map flexbox-fix">
+            <section class="map">
                 <!-- <section> element requires a heading element -->
-                <h3>Find us</h3>
-                <figure>
-                    <img src="images/map-sm.png" srcset="images/map-m.png 809w, images/map-lg.png 1366w" alt="location map">
-                </figure>
+                <h2>Find us</h2>
+                <!-- map -->
+                <div class="location-map" title="location map"></div>
             </section> 
         </main>
         <!-- FOOTER -->
-        <footer class="flexbox-fix">
+        <footer>
             <div class="footer_header">
                 <a href="index.html" rel="home"><img src="images/logo@0,1x.png" srcset="images/logo-lg.png 199w"  alt="Pixel Stories"></a>
             </div>
@@ -84,11 +107,13 @@
             </div>    
             <!-- FOOTER SOCIAL -->
             <nav class="social">
-                <ul class="flexbox-fix">
-                    <li><a href="https://sv-se.facebook.com/"><img src="images/facebook.png" alt="facebook"></a></li>
-                    <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a></li>
-                    <li><a href="https://twitter.com/?lang=sv"><img src="images/twitter.png" alt="twitter"></a></li>
-                    <li><a href="https://se.linkedin.com/"><img src="images/linkedIn.png" alt="linkedIn"></a></li>  
+                <ul>
+                    <div class="social-wrap">
+                        <li><a href="https://sv-se.facebook.com/"><img src="images/facebook.png" alt="facebook"></a></li>
+                        <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a></li>
+                        <li><a href="https://twitter.com/?lang=sv"><img src="images/twitter.png" alt="twitter"></a></li>
+                        <li><a href="https://se.linkedin.com/"><img src="images/linkedIn.png" alt="linkedIn"></a></li>
+                    </div>
                 </ul>  
             </nav>    
         </footer>
