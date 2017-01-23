@@ -168,9 +168,14 @@ header, .fixed-menu{
     background-color: #f12241;
 }
 
+.myName {
+    position: relative;
+    top: 10rem;
+}
+
 .caption_a > p {
     color: white;
-    padding: 15rem 0 0 0.8rem;
+    padding: 10rem 0 0 0.8rem;
     text-align: left;
     line-height: 2.3rem;
     font-size: 1.2rem;
@@ -223,41 +228,46 @@ header, .fixed-menu{
         bottom: 2rem;
     }
     
+    .myName {
+        padding: 0;
+        top: 0;
+    }
      .caption_a > p {
         padding: 3rem 0 1rem 2rem;
     }
     
 }
 
-@media screen and (min-width: 44.5em){/* 712px */
-   
+@media screen and (min-width: 52.5em){ /*840px*/
+    
     .caption_a{
-        bottom: 3rem;
+        bottom: 7rem;
     }
     
-     .caption_a > p {
-        padding-top: 0.2rem;
+    .caption_a > p { 
+        position: relative;
+        bottom: 1rem;
     }
-    
     
 }
 
-@media screen and (min-width: 59em){
-     
-   .transition05:hover {
-        bottom: 18rem;
-    }
-    
+@media screen and (min-width: 64em){
     .skills {
         display: flex;
+        position: relative;
+        bottom: -1rem;
         font-size: 1.2rem;
     }
     
     .icon {
         color: #f12241;
-        margin: 2rem 0 2rem 0.5rem;
+        margin: 2rem 0 2rem 2rem;
         background-color: white;
         padding: 0.5rem 0.8rem;
         border-radius: 0.3rem;
+    }
+    
+    .transition05:hover {
+        bottom: 25rem;
     }
 }
