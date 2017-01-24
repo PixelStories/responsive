@@ -79,42 +79,58 @@ main {
 /* -------  ABOUT.HTML ------- */
 
 /* BACKGROUND */
-.container.large {
-    background-image: url(../images/about_port_mob.png);
-    background-color: #c5c2c2;
-    background-size: cover;
-    background-repeat: no-repeat;
+.desktop-bg {
+    display: none;
+}
+
+.container.main-text {
     height: auto;
+    padding-top: 3rem;
 }
 
-.opacity {
-    background-color: rgba(255, 255, 255, 0.8);
-    background-size: cover;
-    padding: 3rem 0;
+.main-text p {
+    padding: 0 2rem 1rem 2rem;
 }
 
-.opacity p {
-    padding: 0 2rem;
-}
-
-.opacity article, .opacity h1, .h2_a {
+.main-text article, .main-text h2, .h2_a {
     text-align: center;
 }
 
+.main-text > article > h3 {
+    color:  #f12241;
+}
+
 @media screen and (min-width: 40.5em){
-    .container.large {
-        background-image: url(../images/about_desktop.jpg);
+    .desktop-bg {
+        display: block;
         position: relative;
         left: -3%;
+        background-image: url(../images/about_desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 106.5%;
     }
     
-    .opacity > article > p {
+    .opacity {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: cover;
+    padding: 3rem 0;
+    height: 100vh;
+    }
+    
+    .main-text {
+        margin-top: 1rem;
+        padding-bottom: 3rem;
+    }
+    
+    .main-text > article > p {
         padding: 0 10rem;
     }
     
     .opacity > h1 {
-        padding-top: 2rem;
+        position: relative;
+        top: 32%;
+        text-align: center;
     }
 }
 
