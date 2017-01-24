@@ -7,9 +7,8 @@ html {
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: "Open Sans", "Helvetica Neue", Arial;
-    text-align: center;
 }
 
 h1 {
@@ -96,6 +95,10 @@ main {
 
 .opacity p {
     padding: 0 2rem;
+}
+
+.opacity article, .opacity h1, .h2_a {
+    text-align: center;
 }
 
 @media screen and (min-width: 40.5em){
