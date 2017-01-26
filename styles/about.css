@@ -83,7 +83,7 @@ main {
     display: none;
 }
 
-.container.main-text {
+.main-text {
     height: auto;
     padding-top: 3rem;
 }
@@ -101,6 +101,11 @@ main {
 }
 
 @media screen and (min-width: 40.5em){
+    .h1_a {
+        font-size: 4rem;
+        font-weight: 500;
+    }
+    
     .desktop-bg {
         display: block;
         position: relative;
@@ -129,7 +134,7 @@ main {
     
     .opacity > h1 {
         position: relative;
-        top: 32%;
+        top: 43%;
         text-align: center;
     }
 }
