@@ -183,6 +183,7 @@ main {
   height: 96vw;
   width: 96vw;
   display: inline-block;
+  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 47.9375em) and (orientation:landscape) {
@@ -230,6 +231,7 @@ main {
   height: 96vw;
   width: 96vw;
   display: inline-block;
+  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 47.9375em) and (orientation:landscape) {
@@ -276,6 +278,7 @@ main {
   height: 96vw;
   width: 96vw;
   display: inline-block;
+  margin-top: 1rem;
 }
 
 @media only screen and (max-width: 47.9375em) and (orientation:landscape) {
