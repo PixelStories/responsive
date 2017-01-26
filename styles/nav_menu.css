@@ -12,7 +12,6 @@
 
 .fixed-menu {
   background: #fff;
-  border-bottom: 1px solid #000; /* kan tas bort senare */
   height: 4rem;
   left: 0;
   overflow:auto;
