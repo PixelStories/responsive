@@ -178,29 +178,24 @@ footer {
 /* FOOTER - SOCIAL
    ============================================================= */
     .social {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
         width: 100%;
         height: 100%;
         margin: 0 2% 0 0;
     }
     
     .social-wrap {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
         width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
     }
-    
+     
+    /* align icons in a row */
     .social ul {
-        position: relative;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
+        position: relative;
         list-style-type: none;
         width: 100%;
         height: 100%;
