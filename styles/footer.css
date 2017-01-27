@@ -84,14 +84,14 @@ footer {
        
 }
 
-.social ul {
+.social-wrap {
     width: 100%;
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
-.social-wrap {
+.social ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -186,7 +186,7 @@ footer {
         margin: 0 2% 0 0;
     }
     
-    .social ul {
+    .social-wrap {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
@@ -196,13 +196,13 @@ footer {
         padding: 0;
     }
     
-    .social-wrap {
+    .social ul {
         position: relative;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        width: 50%;
-        height: 50%;
+        width: 100%;
+        height: 100%;
         margin: 0;
     }
     

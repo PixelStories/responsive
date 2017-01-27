@@ -1,5 +1,3 @@
-/* Tap target size recommmended by the Android UI guidelines - 48 CSS pixels  */
-
 /* ==============================================
    DEFAULT STYLE
    ============================ */
@@ -25,88 +23,52 @@ body {
     font-family: "Open Sans", "Helvetica Neue", Arial;
 }
 h1 {
-    font-weight: 600;
-    font-size: 3rem;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 h2 {
-    font-weight: 500;
-    font-size: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 500;
 }
 
 h3 {
-    font-weight: 400;
-    font-size: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 h4 {
-    font-weight: 300;
-    font-size: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 
 p {
-    font-size: 1.6rem;
-    margin: 0;
-    padding: 0;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
 }
 
 /* ==============================================
   HEADER SECTION
   ============================ */
-/*header {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: 0;
-}*/
-/*
-.fixed_menu {
-    position: relative;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: #fff; 
-}*/
-
 .page-title {
     display: block;
-    width: 100%;
-    height: 15vh;
-    /*background-color: #f12241;*/
-    margin: 0;
+    width: 100vw;
+    height: 5vh;
 }
 
 .heading-wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items:flex-end;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.heading-wrap h1 {
-    display: block;
-    width: 100%;
-    height: 35%;
+    display: none;
 }
 
 /* Heading wrapper media queries */
 
 /* medium sized screens to xlarge */
 
-@media screen and (min-width: 48em) {
-    /*.fixed_menu {
-        position: absolute;
-        z-index: 1;
-    }*/
-    
+@media screen and (min-width: 48em) {    
     .page-title {
-        position: relative;
         display: block;
+        position: relative;
         width: 100vw;
         height: 100vh;
         margin: 0;
@@ -128,13 +90,14 @@ p {
     }
     
     .heading-wrap h1 {
-        text-align: center;align-self: center;
+        text-align: center;
+        align-self: center;
         margin: 0;
         font-size: 3rem;
     }
 }
 
-@media screen and (min-width: 120em) {
+@media screen and (min-width: 64em) {
     .heading-wrap h1 {
         font-size: 4rem;
     }
@@ -179,8 +142,6 @@ main {
     width: 100%;
     margin: 2rem 0 2rem 0;
 }
-/* add 20% margin to the contact section in large screens */
-
 
 #contact_form {
     flex-direction: column; 
@@ -253,14 +214,14 @@ textarea {
 }
 .ctc {
     position: relative;
-    /* start - properties to be removed from this class */
-    /*
+    /* Had to leave styling for button here
+     * because all-buttons style has position: absolute
+     * and that misplaces the Send button 
+     */
     width: 10rem;
     height: 3rem;
     cursor: pointer;
     font-size: 1.5rem;
-    */
-    /* end */
     padding: 0;
     background-color: #f12241;
     border: none;
@@ -271,8 +232,7 @@ textarea {
 .client-support {
     width: 100%;
     margin: 2rem 0 2rem 0;
-    text-align: center;
-    
+    text-align: center;    
 }
 
 .client-support p {

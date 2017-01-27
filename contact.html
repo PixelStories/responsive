@@ -2,18 +2,19 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <!-- Adding intial-scale=1 allows for a 1:1 relationship  between CSS pixels and device independt pixels regardless of orientation. If that attribute value is missing, some devices will zoom the page when in landscape orientation instead of taking full advantage of a larger width  -->
-        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <title>Pixel Stories</title>
+        <!-- Disable auto-detect telephone numbers on iOS and Android to avoid random number to become tapable  -->
+        <meta name="format-detection" content="telephone=no" /><title>Pixel Stories</title>
         <link rel="shortcut icon" href="images/favicon16.png" type="image/png">
         <link rel="stylesheet" href="styles/normalize.css">
         <link rel="stylesheet" href="styles/nav_menu.css">
         <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="styles/contact.css">
         <script src="js/hamburger-menu.js"></script>
         <script src="js/button_click.js"></script>
-        <link rel="stylesheet" href="styles/contact.css">
-        <link rel="stylesheet" href="styles/footer.css">
+        <!-- <script src="nav_menu.js"></script> -->
         <!-- <script src="nav_menu.js"></script> -->
     </head>
     <body>
@@ -44,10 +45,10 @@
         </header>
         <main>
             <!-- CONTACT FORM SECTION -->
-            <section class="contact_box flexbox-fix">
+            <section class="contact_box">
                 <h2>Tell us about your project</h2>
                 <!-- id to link textarea and button to form -->
-                <form id="contact_form flexbox-fix">
+                <form id="contact_form">
                     <div class="full-name">
                         <div class="form-field1">
                             <div class="form-field-title">Name:</div>
@@ -74,9 +75,9 @@
                         </div>
                     </div>
                 </form>
-                <!-- label, textarea and button element have form attribute to "link" them to the form above -->
-                <label form="contact_form">Message:</label>
-                <textarea name="message" form="contact_form"></textarea>
+                <!-- Textarea and button element have form attribute to "link" them to the form above -->
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" form="contact_form"></textarea>
                 <div class="button-wrap">
                     <button class="all-buttons ctc" type="submit" form="contact_form" value="submit">Send</button>
                 </div>
@@ -85,13 +86,7 @@
                 </div>
             </section>
             <!-- LOCATION MAP SECTION -->
-            <!-- IE does not support srcset.
-           Use conditional statements to 
-           choose a different stylesheet
-           which hides the <img> element with
-           the smallest image and displays only the one with the appropriate images -->
             <section class="map">
-                <!-- <section> element requires a heading element -->
                 <h2>Find us</h2>
                 <!-- map -->
                 <div class="location-map" title="location map"></div>
@@ -99,8 +94,9 @@
         </main>
         <!-- FOOTER -->
         <footer>
+            <!-- FOOTER HEADER -->
             <div class="footer_header">
-                <a href="index.html" rel="home"><img src="images/logo@0,1x.png" srcset="images/logo-lg.png 199w"  alt="Pixel Stories"></a>
+                <a href="index.html" rel="home"><img src="images/logo@0,1x.png" srcset="images/logo-lg.png"  alt="Pixel Stories"></a>
             </div>
             <!-- FOOTER ADDRESS -->
             <div class="address_contact">
@@ -111,14 +107,14 @@
             </div>    
             <!-- FOOTER SOCIAL -->
             <nav class="social">
-                <ul>
-                    <div class="social-wrap">
+                <div class="social-wrap">
+                    <ul>
                         <li><a href="https://sv-se.facebook.com/"><img src="images/facebook.png" alt="facebook"></a></li>
                         <li><a href="https://www.instagram.com/"><img src="images/instagram.png" alt="instagram"></a></li>
                         <li><a href="https://twitter.com/?lang=sv"><img src="images/twitter.png" alt="twitter"></a></li>
                         <li><a href="https://se.linkedin.com/"><img src="images/linkedIn.png" alt="linkedIn"></a></li>
-                    </div>
-                </ul>  
+                    </ul>  
+                </div>
             </nav>    
         </footer>
     </body>
